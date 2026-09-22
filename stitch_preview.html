@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brixion Bricks &amp; Blocks LLP | Industrial Fly Ash Masonry &amp; Precision Engineering</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#001853",
+            "primary-container": "#132D73",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8298e3",
+            "secondary": "#0A5FAE",
+            "secondary-container": "#6EAAFF",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#003e76",
+            "secondary-fixed": "#D5E3FF",
+            "secondary-fixed-dim": "#A6C8FF",
+            "tertiary": "#203E91",
+            "surface": "#F9F9FF",
+            "surface-bright": "#FFFFFF",
+            "surface-dim": "#D8DAE2",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low": "#F2F3FC",
+            "surface-container": "#ECEDF6",
+            "surface-container-high": "#E6E8F0",
+            "surface-container-highest": "#E1E2EB",
+            "on-surface": "#171A20",
+            "on-surface-variant": "#444651",
+            "outline": "#757682",
+            "outline-variant": "#C5C5D2",
+            "brand-navy": "#132D73",
+            "brand-cobalt": "#203E91",
+            "brand-electric": "#1764B4",
+            "brand-concrete": "#BFC4CA",
+            "brand-light": "#F5F7FA"
+          },
+          fontFamily: {
+            "display-hero": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "title-spec": ["Space Grotesk", "sans-serif"],
+            "label-caps": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-code": ["Inter", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #001442; }
+    ::-webkit-scrollbar-thumb { background: #1764B4; border-radius: 3px; }
+    .blueprint-grid-dark {
+      background-size: 36px 36px;
+      background-image: linear-gradient(to right, rgba(110, 170, 255, 0.08) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(110, 170, 255, 0.08) 1px, transparent 1px);
+    }
+    .blueprint-grid-light {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(19, 45, 115, 0.06) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(19, 45, 115, 0.06) 1px, transparent 1px);
+    }
+    @keyframes shimmerMotion {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+    .shimmer-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-sweep::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      animation: shimmerMotion 3.8s infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary selection:text-white">
+<!-- MASTER ARCHITECTURAL NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#001238]/90 backdrop-blur-xl border-b border-secondary/25 shadow-[0_8px_32px_rgba(0,18,56,0.5)] transition-all">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Official Brixion Dimensional Geometric SVG Brand Mark -->
+<a class="flex items-center gap-3.5 group" href="#hero-3d">
+<div class="h-11 w-11 bg-primary-container border border-secondary-container/40 flex items-center justify-center p-1.5 shadow-lg group-hover:border-secondary-container transition-colors">
+<svg class="w-full h-full" fill="none" viewbox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+<!-- Faceted Metallic 3D 'B' Emblem -->
+<polygon fill="#001853" points="10,8 36,8 46,18 46,27 34,29 48,34 48,46 36,52 10,52"></polygon>
+<polygon fill="url(#brandGradTop)" points="12,10 35,10 43,18 33,27 12,27"></polygon>
+<polygon fill="url(#brandGradBot)" points="12,29 33,29 45,35 45,44 35,50 12,50"></polygon>
+<!-- Concrete Block Texture Lines on 'B' -->
+<line stroke="#1764B4" stroke-dasharray="3 2" stroke-width="1.5" x1="12" x2="38" y1="18" y2="18"></line>
+<line stroke="#1764B4" stroke-dasharray="3 2" stroke-width="1.5" x1="12" x2="40" y1="39" y2="39"></line>
+<rect fill="#132D73" fill-opacity="0.6" height="6" width="8" x="18" y="14"></rect>
+<rect fill="#132D73" fill-opacity="0.6" height="6" width="8" x="28" y="14"></rect>
+<rect fill="#132D73" fill-opacity="0.6" height="7" width="10" x="18" y="34"></rect>
+<rect fill="#132D73" fill-opacity="0.6" height="7" width="10" x="30" y="34"></rect>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="brandGradTop" x1="12" x2="43" y1="10" y2="27">
+<stop stop-color="#6EAAFF"></stop>
+<stop offset="0.5" stop-color="#1764B4"></stop>
+<stop offset="1" stop-color="#0A5FAE"></stop>
+</lineargradient>
+<lineargradient gradientunits="userSpaceOnUse" id="brandGradBot" x1="12" x2="45" y1="29" y2="50">
+<stop stop-color="#B5C4FF"></stop>
+<stop offset="0.5" stop-color="#203E91"></stop>
+<stop offset="1" stop-color="#001853"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-xl uppercase tracking-wider text-white font-bold group-hover:text-secondary-container transition-colors">BRIXION</span>
+<span class="font-label-code text-[10px] uppercase tracking-[0.22em] text-secondary-fixed-dim">BRICKS AND BLOCKS LLP</span>
+</div>
+</a>
+<!-- Desktop Links -->
+<nav class="hidden lg:flex items-center gap-1 bg-white/[0.04] p-1.5 border border-white/10 rounded-sm">
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-white font-bold bg-secondary/40 border-b-2 border-secondary-container transition-all" href="#hero-3d">Home</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#brand-architecture">About Us</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#product-showcase">Products</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#manufacturing-process">Manufacturing</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#specialties">Specialities</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#comparison-matrix">Comparison</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#why-choose-us">Why Choose Us</a>
+<a class="px-3.5 py-2 font-label-caps text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-colors" href="#factory-procurement">Contact</a>
+</nav>
+<!-- Despatch Hotlines & Action -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex flex-col text-right">
+<span class="font-label-code text-[10px] text-slate-400 uppercase tracking-wider">Despatch Desk</span>
+<a class="font-label-code text-xs text-secondary-container font-semibold hover:underline" href="tel:9363012813">+91 93630 12813</a>
+</div>
+<a class="shimmer-sweep inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-brand-electric text-white px-5 py-2.5 font-label-caps text-xs uppercase tracking-widest font-bold shadow-[0_4px_18px_rgba(10,95,174,0.4)] hover:brightness-110 active:translate-y-0.5 transition-all" href="#factory-procurement">
+<span>Request a Quote</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 overflow-hidden">
+<!-- 1. CINEMATIC 3D INDUSTRIAL HERO SECTION WITH LIVE WEBGL -->
+<section class="relative w-full min-h-[94vh] bg-[#000e2e] text-white flex items-center overflow-hidden border-b border-secondary/30" id="hero-3d">
+<!-- Architectural Atmospheric Grid -->
+<div class="absolute inset-0 blueprint-grid-dark pointer-events-none opacity-30 z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#000e2e]/70 via-transparent to-[#000e2e] pointer-events-none z-[2]"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 relative z-10 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Hero Copy Content (Col 1-6) -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<!-- Cert & Location Badges -->
+<div class="flex flex-wrap items-center gap-3">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/30 border border-secondary-container/40 text-secondary-container font-label-code text-xs uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                IS:12894:2002 Certified Heavy Density
+              </span>
+<span class="font-label-code text-xs text-slate-400 uppercase tracking-widest">Coimbatore Automated Plant</span>
+</div>
+<!-- Official Headline & Slogan -->
+<div class="space-y-3">
+<h1 class="font-display-hero text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08]">
+                BUILD STRONG.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container via-white to-secondary-fixed">
+                  BUILD SMART.
+                </span><br/>
+<span class="text-2xl sm:text-3xl lg:text-4xl text-secondary-container font-semibold tracking-normal">
+                  CHOOSE BRIXION BRICKS.
+                </span>
+</h1>
+<p class="font-headline-sm text-lg sm:text-xl text-slate-300 font-medium max-w-xl">
+                Premium Fly Ash Bricks &amp; Blocks Engineered for High-Density Architectural Resilience.
+              </p>
+</div>
+<p class="font-body-md text-slate-300 max-w-lg leading-relaxed">
+              Precision hydraulically compacted masonry units manufactured with Class-F pulverized fuel ash. Zero kiln-firing, micron geometric accuracy, and up to 3× higher compressive strength than ordinary red clay bricks.
+            </p>
+<!-- Specification Strip -->
+<div class="grid grid-cols-3 gap-3 p-3.5 bg-white/[0.06] backdrop-blur-md border border-white/10 max-w-xl">
+<div class="flex flex-col border-r border-white/10 pr-2">
+<span class="font-label-code text-[10px] text-slate-400 uppercase">Modular Dimension</span>
+<span class="font-title-spec text-sm sm:text-base font-bold text-white">9 × 4.25 × 3″</span>
+<span class="font-label-code text-[9px] text-secondary-container">228 × 108 × 76 mm</span>
+</div>
+<div class="flex flex-col border-r border-white/10 px-2">
+<span class="font-label-code text-[10px] text-slate-400 uppercase">Mass Benchmark</span>
+<span class="font-title-spec text-sm sm:text-base font-bold text-white">≈ 3.25 KG</span>
+<span class="font-label-code text-[9px] text-secondary-container">Per Calibrated Unit</span>
+</div>
+<div class="flex flex-col pl-2">
+<span class="font-label-code text-[10px] text-slate-400 uppercase">Carbon Emission</span>
+<span class="font-title-spec text-sm sm:text-base font-bold text-emerald-400">0% KILN</span>
+<span class="font-label-code text-[9px] text-slate-300">Hydraulic Compaction</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-brand-cobalt text-white px-7 py-3.5 font-label-caps text-xs uppercase tracking-widest font-bold shadow-lg hover:shadow-secondary/40 hover:scale-[1.02] transition-all" href="#product-showcase">
+<span class="material-symbols-outlined text-base">view_in_ar</span>
+<span>Explore Our Products</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-7 py-3.5 font-label-caps text-xs uppercase tracking-widest font-bold backdrop-blur-md transition-colors" href="#factory-procurement">
+<span class="material-symbols-outlined text-base">request_quote</span>
+<span>Request a Quote</span>
+</a>
+</div>
+<!-- Despatch Status Bar -->
+<div class="flex items-center gap-3 text-xs font-label-code text-slate-400">
+<span class="flex h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+<span>Daily Despatch Capacity: 50,000+ Units Ready for Tamil Nadu Logistics</span>
+</div>
+</div>
+<!-- Hero 3D WebGL Interactive CAD Scene Stage (Col 7-12) -->
+<div class="lg:col-span-6 relative flex flex-col items-center">
+<div class="relative w-full border border-secondary/40 bg-gradient-to-b from-[#00174a]/80 to-[#000d2b]/95 p-3 shadow-2xl backdrop-blur-sm overflow-hidden">
+<!-- Live CAD Telemetry Top Header -->
+<div class="flex items-center justify-between border-b border-white/10 pb-2.5 mb-2 px-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-secondary-container animate-pulse"></span>
+<span class="font-label-code text-xs text-white uppercase font-bold tracking-wider">3D SPECIMEN CAD STACK</span>
+</div>
+<div class="flex items-center gap-3 text-[11px] font-label-code text-secondary-container">
+<span class="hidden sm:inline">IS:12894 GRADE-A BENCHMARK</span>
+<span class="px-2 py-0.5 bg-secondary/30 border border-secondary-container/40">INTERACTIVE WEBGL</span>
+</div>
+</div>
+<!-- LIVE THREE.JS INTERACTIVE SCENE -->
+<div class="relative w-full h-[460px] lg:h-[520px] rounded bg-transparent overflow-hidden">
+<!-- STITCH_THREEJS_START:ANIMATION_11 class="w-full h-[540px] lg:h-[640px]" -->
+<div class="w-full h-[540px] lg:h-[640px]" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_11" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_11');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Brixion Cinematic 3D Architectural World & Multi-Brick CAD Scene
+// Pure procedural Three.js visualization of Class-F Fly Ash Masonry & Modern Architectural Assemblage
+// Completely original: No brochure photos. Pure WebGL lighting, procedural bump mapping, dimensional HUD, and interactive camera.
+
+const container = document.getElementById('threejs-container-ANIMATION_10') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || (window.innerHeight * 0.9);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 1000);
+camera.position.set(7.5, 5.2, 9.8);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.2;
+container.appendChild(renderer.domElement);
+
+// Architectural Lighting Rig
+const ambientLight = new THREE.AmbientLight(0xdce7f6, 1.25);
+scene.add(ambientLight);
+
+// Key Directional Sun/Studio Light
+const keySun = new THREE.DirectionalLight(0xffffff, 2.4);
+keySun.position.set(12, 18, 14);
+keySun.castShadow = true;
+keySun.shadow.mapSize.width = 2048;
+keySun.shadow.mapSize.height = 2048;
+keySun.shadow.bias = -0.0004;
+scene.add(keySun);
+
+// Deep Navy/Cobalt Architectural Rim Light
+const cobaltRim = new THREE.DirectionalLight(0x132D73, 3.2);
+cobaltRim.position.set(-12, -4, -10);
+scene.add(cobaltRim);
+
+// Electric Blue Under-Glow Point Light
+const electricPoint = new THREE.PointLight(0x1764B4, 2.5, 25);
+electricPoint.position.set(2, 3.8, 3.5);
+scene.add(electricPoint);
+
+// Root Assembly Group
+const structuralRig = new THREE.Group();
+scene.add(structuralRig);
+
+// Realistic Fly Ash Concrete Brick Materials
+const flyAshMat = new THREE.MeshStandardMaterial({
+  color: 0x9ca2a8,
+  roughness: 0.88,
+  metalness: 0.06,
+  bumpScale: 0.04
+});
+
+const heroBrickMat = new THREE.MeshStandardMaterial({
+  color: 0xb5bac2,
+  roughness: 0.76,
+  metalness: 0.12
+});
+
+const darkSpecimenMat = new THREE.MeshStandardMaterial({
+  color: 0x868c94,
+  roughness: 0.92,
+  metalness: 0.04
+});
+
+// Standard 9 x 4.25 x 3 inches normalized: (w: 2.25, h: 0.75, d: 1.06)
+function buildBrick(w = 2.25, h = 0.75, d = 1.06, mat = flyAshMat) {
+  const geom = new THREE.BoxGeometry(w, h, d);
+  const mesh = new THREE.Mesh(geom, mat);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  return mesh;
+}
+
+// 1. Base Layer (Course 01 - Foundation Stretcher Bond)
+const b1 = buildBrick(2.25, 0.75, 1.06, flyAshMat);
+b1.position.set(-1.2, -0.9, 0.1);
+structuralRig.add(b1);
+
+const b2 = buildBrick(2.25, 0.75, 1.06, flyAshMat);
+b2.position.set(1.2, -0.9, 0.1);
+structuralRig.add(b2);
+
+const b3 = buildBrick(2.25, 0.75, 1.06, darkSpecimenMat);
+b3.position.set(0, -0.9, -1.05);
+structuralRig.add(b3);
+
+// 2. Middle Hero Stretcher Block (Raised Focal Specimen)
+const heroBrick = buildBrick(2.35, 0.8, 1.15, heroBrickMat);
+heroBrick.position.set(0, 0.05, 0.5);
+structuralRig.add(heroBrick);
+
+// Dimension HUD Wireframe overlay on Hero Brick
+const wireGeom = new THREE.EdgesGeometry(new THREE.BoxGeometry(2.36, 0.81, 1.16));
+const wireMat = new THREE.LineBasicMaterial({ color: 0x1764B4, transparent: true, opacity: 0.85, linewidth: 2 });
+const wireframe = new THREE.LineSegments(wireGeom, wireMat);
+wireframe.position.copy(heroBrick.position);
+structuralRig.add(wireframe);
+
+// 3. Staggered Interlocking Layer
+const b4 = buildBrick(2.25, 0.75, 1.06, flyAshMat);
+b4.position.set(-0.9, 1.0, -0.2);
+structuralRig.add(b4);
+
+const b5 = buildBrick(2.25, 0.75, 1.06, flyAshMat);
+b5.position.set(0.9, 1.0, -0.2);
+structuralRig.add(b5);
+
+// 4. Vertical Compressive Shear Test Specimen (Inclined Load Display)
+const bVert = buildBrick(0.8, 2.25, 1.06, heroBrickMat);
+bVert.position.set(1.5, 1.45, 0.8);
+bVert.rotation.z = Math.PI / 14;
+bVert.rotation.y = -Math.PI / 18;
+structuralRig.add(bVert);
+
+// 5. Cantilever Crown Brick
+const bTop = buildBrick(2.25, 0.75, 1.06, darkSpecimenMat);
+bTop.position.set(-0.2, 1.9, -0.15);
+structuralRig.add(bTop);
+
+// Floor Shadow Catcher Plane
+const groundGeom = new THREE.PlaneGeometry(50, 50);
+const groundMat = new THREE.ShadowMaterial({ opacity: 0.3 });
+const ground = new THREE.Mesh(groundGeom, groundMat);
+ground.rotation.x = -Math.PI / 2;
+ground.position.y = -1.4;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// Precision Axis Grid Floor
+const gridHelper = new THREE.GridHelper(18, 26, 0x1764B4, 0x132D73);
+gridHelper.position.y = -1.39;
+gridHelper.material.opacity = 0.22;
+gridHelper.material.transparent = true;
+scene.add(gridHelper);
+
+// Interactive Mouse Orbit & Spring Tracking
+let targetRotY = 0.45;
+let targetRotX = 0.18;
+let isDragging = false;
+let previousMousePosition = { x: 0, y: 0 };
+
+container.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+});
+
+window.addEventListener('mouseup', () => { isDragging = false; });
+
+window.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    const deltaX = e.clientX - previousMousePosition.x;
+    const deltaY = e.clientY - previousMousePosition.y;
+    targetRotY += deltaX * 0.008;
+    targetRotX += deltaY * 0.008;
+    previousMousePosition = { x: e.clientX, y: e.clientY };
+  } else {
+    const rect = container.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      targetRotY = 0.45 + (x * 0.32);
+      targetRotX = 0.18 - (y * 0.18);
+    }
+  }
+});
+
+// Touch Orbit Support
+container.addEventListener('touchmove', (e) => {
+  if (e.touches.length === 1) {
+    const touch = e.touches[0];
+    const rect = container.getBoundingClientRect();
+    const x = ((touch.clientX - rect.left) / rect.width) * 2 - 1;
+    targetRotY = 0.45 + (x * 0.35);
+  }
+}, { passive: true });
+
+function onWindowResize() {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || (window.innerHeight * 0.9);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+}
+window.addEventListener('resize', onWindowResize);
+
+// Clock & Render Loop
+const clock = new THREE.Clock();
+const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  if (!isReducedMotion) {
+    structuralRig.position.y = Math.sin(elapsedTime * 0.75) * 0.06;
+    structuralRig.rotation.y += (targetRotY - structuralRig.rotation.y) * 0.05;
+    structuralRig.rotation.x += (targetRotX - structuralRig.rotation.x) * 0.05;
+    wireMat.opacity = 0.5 + Math.sin(elapsedTime * 2.4) * 0.35;
+    camera.position.x = 7.5 + Math.cos(elapsedTime * 0.12) * 0.4;
+  }
+
+  camera.lookAt(0, 0.4, 0);
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_11 -->
+</div>
+<!-- Live CAD Telemetry Overlays Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-3 border-t border-white/10 text-xs font-label-code">
+<div class="bg-white/5 p-2 border border-white/10">
+<span class="text-[10px] text-slate-400 uppercase block">Compressive:</span>
+<span class="text-white font-bold">10 - 12 MPa</span>
+</div>
+<div class="bg-white/5 p-2 border border-white/10">
+<span class="text-[10px] text-slate-400 uppercase block">Water Abs:</span>
+<span class="text-secondary-container font-bold">&lt; 8 - 10%</span>
+</div>
+<div class="bg-white/5 p-2 border border-white/10">
+<span class="text-[10px] text-slate-400 uppercase block">Metric Size:</span>
+<span class="text-white font-bold">228×108×76mm</span>
+</div>
+<div class="bg-white/5 p-2 border border-white/10">
+<span class="text-[10px] text-slate-400 uppercase block">Tolerance:</span>
+<span class="text-white font-bold">± 0.5 mm</span>
+</div>
+</div>
+<!-- Interactive Controls HUD -->
+<div class="flex items-center justify-between pt-2.5 px-2 text-[11px] font-label-code text-slate-300">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary-container">touch_app</span>
+<span>Drag to Orbit 360° · Scroll to Zoom</span>
+</span>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-white/10 text-white uppercase text-[10px] tracking-wider">[ORBIT 360°]</span>
+<span class="px-2 py-0.5 bg-secondary/30 text-secondary-container uppercase text-[10px] tracking-wider">[CAD HUD]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. SECTION A — ARCHITECTURAL MANIFESTO & BRAND INTRODUCTION ("THE FOUNDATION OF TOMORROW") -->
+<section class="w-full py-20 bg-surface border-b border-surface-container-high relative" id="brand-architecture">
+<div class="absolute inset-0 blueprint-grid-light opacity-50 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<!-- Header Tagline -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div class="max-w-2xl">
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Corporate Manifesto</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-primary font-bold tracking-tight">
+              THE FOUNDATION OF TOMORROW.
+            </h2>
+<p class="font-body-lg text-on-surface-variant mt-3 leading-relaxed">
+              Replacing archaic soil-destructive brick baking with scientific multi-tonnage aggregate compaction. Brixion delivers industrialized consistency for high-rise frames and residential master developments.
+            </p>
+</div>
+<div class="flex flex-col items-start md:items-end font-label-code text-xs text-outline space-y-1">
+<span class="text-primary font-bold uppercase">BRIXION BRICKS &amp; BLOCKS LLP</span>
+<span>REGD. ARASUR INDUSTRIAL ESTATE · COIMBATORE</span>
+</div>
+</div>
+<!-- Architectural Monolith Grid with Bespoke Orthographic Schematic (Zero Photos) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Bespoke SVG Technical Orthographic Blueprint -->
+<div class="lg:col-span-5 relative group">
+<div class="absolute -inset-2 bg-gradient-to-r from-primary-container to-secondary opacity-15 blur-lg"></div>
+<div class="relative bg-primary-container p-6 shadow-2xl border border-secondary/30 text-white">
+<div class="flex items-center justify-between border-b border-white/15 pb-3 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-lg">architecture</span>
+<span class="font-label-code text-xs text-white uppercase font-bold tracking-wider">ORTHOGRAPHIC BLUEPRINT</span>
+</div>
+<span class="font-label-code text-[10px] text-secondary-container uppercase">DWG SPEC: BRX-2025</span>
+</div>
+<!-- High-Fidelity SVG Architectural Isometric & Elevation Diagram -->
+<div class="bg-[#0b1b42] p-4 border border-white/10 rounded-sm">
+<svg class="w-full h-auto" fill="none" viewbox="0 0 360 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid backdrop -->
+<defs>
+<pattern height="20" id="cadGrid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(110, 170, 255, 0.12)" stroke-width="0.8"></path>
+</pattern>
+</defs>
+<rect fill="url(#cadGrid)" height="280" width="360"></rect>
+<!-- Dimension Extension Lines & Markers -->
+<line stroke="#6EAAFF" stroke-dasharray="4 2" stroke-width="1.2" x1="50" x2="310" y1="210" y2="210"></line>
+<line stroke="#6EAAFF" stroke-width="1.5" x1="50" x2="50" y1="205" y2="215"></line>
+<line stroke="#6EAAFF" stroke-width="1.5" x1="310" x2="310" y1="205" y2="215"></line>
+<text fill="#6EAAFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" x="180" y="226">LENGTH: 228 mm (9.0")</text>
+<line stroke="#6EAAFF" stroke-dasharray="4 2" stroke-width="1.2" x1="325" x2="325" y1="80" y2="180"></line>
+<line stroke="#6EAAFF" stroke-width="1.5" x1="320" x2="330" y1="80" y2="80"></line>
+<line stroke="#6EAAFF" stroke-width="1.5" x1="320" x2="330" y1="180" y2="180"></line>
+<text fill="#6EAAFF" font-family="monospace" font-size="10" text-anchor="middle" transform="rotate(90 335 135)" x="335" y="135">HEIGHT: 76 mm (3.0")</text>
+<!-- 3D Isometric Brick Specimen with Chamfer & Mortar Frog -->
+<!-- Top Face -->
+<polygon fill="#2A4B8D" points="120,50 260,50 300,90 160,90" stroke="#6EAAFF" stroke-width="1.5"></polygon>
+<!-- Indented Frog on Top Face -->
+<polygon fill="#132D73" points="145,60 240,60 265,80 170,80" stroke="#6EAAFF" stroke-dasharray="2 2" stroke-width="1"></polygon>
+<text fill="#B5C4FF" font-family="sans-serif" font-size="9" font-weight="bold" letter-spacing="2" text-anchor="middle" x="205" y="74">BRIXION</text>
+<!-- Front Elevation Face -->
+<polygon fill="#1B356E" points="160,90 300,90 300,170 160,170" stroke="#6EAAFF" stroke-width="1.5"></polygon>
+<!-- Left Side Elevation Face -->
+<polygon fill="#132754" points="120,50 160,90 160,170 120,130" stroke="#6EAAFF" stroke-width="1.5"></polygon>
+<!-- Secondary Staggered Interlocking Specimen -->
+<polygon fill="#10234A" opacity="0.85" points="60,130 160,130 160,195 60,195" stroke="#6EAAFF" stroke-width="1.2"></polygon>
+<polygon fill="#1F3C78" opacity="0.85" points="40,105 120,105 160,130 60,130" stroke="#6EAAFF" stroke-width="1.2"></polygon>
+<!-- Mortar Bed Indicator (Razor 3-5mm joint) -->
+<line stroke="#00FFA3" stroke-dasharray="4 2" stroke-width="2" x1="60" x2="300" y1="130" y2="130"></line>
+<circle cx="90" cy="130" fill="#00FFA3" r="3"></circle>
+<line stroke="#00FFA3" stroke-width="1" x1="90" x2="90" y1="130" y2="160"></line>
+<text fill="#00FFA3" font-family="monospace" font-size="9" text-anchor="middle" x="90" y="174">3-5mm Thin-Bed Mortar</text>
+<!-- Compressive Vector Arrows -->
+<path d="M 210,15 L 210,40 M 205,32 L 210,40 L 215,32" stroke="#FFD700" stroke-width="2"></path>
+<path d="M 250,15 L 250,40 M 245,32 L 250,40 L 255,32" stroke="#FFD700" stroke-width="2"></path>
+<text fill="#FFD700" font-family="monospace" font-size="9" text-anchor="middle" x="230" y="12">LOAD 12 MPa</text>
+</svg>
+</div>
+<!-- Blueprint Footer Info -->
+<div class="mt-4 pt-3 border-t border-white/15 flex items-center justify-between text-xs font-label-code">
+<span class="text-slate-300">Class-F Fly Ash Aggregate Mix</span>
+<span class="text-secondary-container font-bold">100% Non-Combustion</span>
+</div>
+</div>
+</div>
+<!-- Editorial Vision & Three Pillars -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="p-8 bg-surface-container-low border border-outline-variant/50 shadow-sm space-y-6">
+<h3 class="font-title-spec text-2xl text-primary font-bold tracking-tight">
+                Architectural Integrity Built on Zero Soil Depletion
+              </h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                Conventional burnt-clay bricks consume thousands of acres of fertile topsoil every year while spewing heavy greenhouse gases into the atmosphere. Brixion utilizes industrial thermal power plant fly ash byproduct, combining it with high-grade binder cement and stone aggregates under hydraulic press calibration to construct superior masonry specimens.
+              </p>
+<!-- Three Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-4 bg-white border-l-2 border-primary shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1">precision_manufacturing</span>
+<h4 class="font-title-spec text-sm font-bold text-primary">Hydraulic Dies</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-1">Die-cast precision eliminating wall plaster unevenness.</p>
+</div>
+<div class="p-4 bg-white border-l-2 border-secondary shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1">eco</span>
+<h4 class="font-title-spec text-sm font-bold text-primary">GRIHA / LEED</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-1">Directly awards green building certification points.</p>
+</div>
+<div class="p-4 bg-white border-l-2 border-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1">savings</span>
+<h4 class="font-title-spec text-sm font-bold text-primary">Mortar Economy</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-1">Saves up to 40% joint mortar through razor plumbness.</p>
+</div>
+</div>
+<!-- Verbatim Mission Banner -->
+<div class="p-4 bg-primary text-white flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">format_quote</span>
+<p class="font-body-sm italic text-slate-200">
+                  "BUILD STRONG. BUILD SMART. CHOOSE BRIXION BRICKS. Every 100,000 Brixion fly ash bricks produced preserves approximately 280 tonnes of fertile agrarian topsoil and prevents 40 tonnes of carbon dioxide kiln releases."
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECTION B — ENGINEERED PRODUCT SHOWCASE & MASONRY ESTIMATOR ("ENGINEERED FOR EVERY BUILD") -->
+<section class="w-full py-20 bg-surface-container-low border-b border-surface-container-high" id="product-showcase">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Title -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Verified Spec Master</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl text-primary font-bold tracking-tight">
+            ENGINEERED FOR EVERY BUILD
+          </h2>
+<p class="font-body-md text-on-surface-variant mt-3">
+            Extracted directly from the official Brixion engineering dossier. Engineered for multi-story load-bearing, non-load-bearing, and shear facade installations.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Card 1: Core Physical Specs -->
+<div class="lg:col-span-4 bg-white p-8 border border-outline-variant/60 shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-xs text-secondary font-bold uppercase">PHYSICAL METRICS</span>
+<span class="px-2.5 py-1 bg-secondary/10 text-secondary font-label-code text-[11px] font-bold">GRADE A SPEC</span>
+</div>
+<h3 class="font-headline-md text-2xl text-primary font-bold mb-4">Fly Ash Bricks</h3>
+<p class="text-xs text-on-surface-variant mb-5">
+                Fly ash bricks are eco-friendly building blocks made from fly ash, cement, sand, and water. They are strong, durable, and produced without firing, reducing environmental impact.
+              </p>
+<div class="space-y-4 font-body-md divide-y divide-surface-container">
+<div class="pt-2 flex justify-between items-center">
+<span class="text-on-surface-variant">Size (Inches)</span>
+<span class="font-title-spec font-bold text-primary">9 × 4.25 × 3 inches</span>
+</div>
+<div class="pt-3 flex justify-between items-center">
+<span class="text-on-surface-variant">Metric Dimension</span>
+<span class="font-title-spec font-bold text-primary">228 × 108 × 76 mm</span>
+</div>
+<div class="pt-3 flex justify-between items-center">
+<span class="text-on-surface-variant">Weight Per Unit</span>
+<span class="font-title-spec font-bold text-secondary">Approx. 3.25 kg per brick</span>
+</div>
+<div class="pt-3 flex justify-between items-center">
+<span class="text-on-surface-variant">Compressive Strength</span>
+<span class="font-title-spec font-bold text-primary">10 - 12 N/mm² (MPa)</span>
+</div>
+<div class="pt-3 flex justify-between items-center">
+<span class="text-on-surface-variant">Water Absorption</span>
+<span class="font-title-spec font-bold text-emerald-600">&lt; 8 - 10% Max</span>
+</div>
+<div class="pt-3 flex justify-between items-center">
+<span class="text-on-surface-variant">Standard Benchmark</span>
+<span class="font-label-code text-xs font-semibold text-primary">IS:12894:2002</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container">
+<span class="font-label-code text-[11px] text-outline block uppercase">Dimensional Tolerance</span>
+<span class="font-body-sm text-xs text-on-surface">Dimensional length ±1.5mm, width ±1.0mm, height ±1.0mm.</span>
+</div>
+</div>
+<!-- Card 2: Interactive Construction & Mortar Calculator -->
+<div class="lg:col-span-8 bg-primary text-white p-8 border border-secondary/30 shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">calculate</span>
+<span class="font-title-spec text-lg font-bold text-white uppercase tracking-wider">Interactive Masonry Volume Estimator</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary-container uppercase">Civil Estimation Tool</span>
+</div>
+<p class="font-body-sm text-slate-300 mb-6">
+                Calculate estimated brick requirements, dispatch payload, and mortar savings based on your project wall surface area in square feet.
+              </p>
+<!-- Inputs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+<div>
+<label class="font-label-code text-xs text-slate-300 block mb-1 uppercase">Wall Area (Square Feet)</label>
+<input class="w-full bg-[#001f66] border border-secondary-container/30 px-4 py-2.5 text-white font-title-spec text-lg focus:outline-none focus:border-secondary-container" id="calc-sqft" min="100" step="50" type="number" value="1000"/>
+</div>
+<div>
+<label class="font-label-code text-xs text-slate-300 block mb-1 uppercase">Wall Thickness</label>
+<select class="w-full bg-[#001f66] border border-secondary-container/30 px-4 py-2.5 text-white font-title-spec text-base focus:outline-none focus:border-secondary-container" id="calc-thickness">
+<option value="4.5">4.5 Inch (Single Stretcher Partition)</option>
+<option selected="" value="9">9.0 Inch (Double Course Load-Bearing)</option>
+</select>
+</div>
+</div>
+<!-- Output Results Display -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-5 bg-[#00164e] border border-white/10">
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase block">Required Brixion Bricks</span>
+<span class="font-display-hero text-2xl sm:text-3xl text-secondary-container font-bold" id="res-bricks">8,650</span>
+<span class="font-label-code text-[10px] text-slate-300 block">Includes 3% jobsite wastage</span>
+</div>
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase block">Mortar Consumption</span>
+<span class="font-display-hero text-2xl sm:text-3xl text-white font-bold" id="res-mortar">- 35%</span>
+<span class="font-label-code text-[10px] text-emerald-400 block">vs Clay Brick 15mm Bed</span>
+</div>
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase block">Total Freight Mass</span>
+<span class="font-display-hero text-2xl sm:text-3xl text-white font-bold" id="res-weight">28.1 T</span>
+<span class="font-label-code text-[10px] text-slate-300 block">Estimated dispatch weight</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+<span class="font-label-code text-xs text-slate-300">
+                Calculated according to CPWD Indian Standard brickwork consumption metrics.
+              </span>
+<a class="inline-flex items-center gap-2 text-xs font-label-caps uppercase tracking-wider text-secondary-container hover:text-white font-bold" href="#factory-procurement">
+<span>Book This Estimation with Factory</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECTION C — AUTOMATED MANUFACTURING ARCHITECTURE ("FROM MATERIAL TO BUILT STRENGTH") -->
+<section class="w-full py-20 bg-surface border-b border-surface-container-high" id="manufacturing-process">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div>
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Automated Plant Machinery</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-primary font-bold tracking-tight">
+              FROM MATERIAL TO BUILT STRENGTH
+            </h2>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-xl">
+              Industrial automated hydraulic cycle at our Muthalipalayam, Arasur facility guarantees pristine rectangularity and high compressive compaction.
+            </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-secondary/10 text-secondary font-label-caps text-xs uppercase font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Brixion Industrial Process Flow
+            </span>
+</div>
+</div>
+<!-- Bespoke Procedural SVG Process Flow Architecture (Zero Photos) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Bespoke SVG Industrial Production Flow Diagram -->
+<div class="lg:col-span-6 bg-[#00143d] p-6 shadow-xl border border-secondary/30 flex flex-col justify-between text-white">
+<div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-xl">precision_manufacturing</span>
+<span class="font-label-code text-xs text-white uppercase font-bold tracking-wider">AUTOMATED PRODUCTION CYCLE SCHEMATIC</span>
+</div>
+<span class="font-label-code text-[10px] text-emerald-400 font-semibold">ZERO KILN FLUE EMISSIONS</span>
+</div>
+<!-- Procedural Industrial Plant CAD SVG Diagram -->
+<div class="bg-[#000e2b] p-4 border border-white/10 rounded-sm">
+<svg class="w-full h-auto" fill="none" viewbox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+<!-- Silos & Batching Hopper -->
+<rect fill="#132D73" height="90" rx="3" stroke="#6EAAFF" stroke-width="1.5" width="45" x="20" y="30"></rect>
+<polygon fill="#203E91" points="20,120 65,120 42,145" stroke="#6EAAFF" stroke-width="1.2"></polygon>
+<text fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="42" y="75">FLY ASH</text>
+<text fill="#6EAAFF" font-family="monospace" font-size="7" text-anchor="middle" x="42" y="88">SILO</text>
+<rect fill="#132D73" height="75" rx="3" stroke="#6EAAFF" stroke-width="1.5" width="40" x="75" y="45"></rect>
+<polygon fill="#203E91" points="75,120 115,120 95,145" stroke="#6EAAFF" stroke-width="1.2"></polygon>
+<text fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="95" y="85">CEMENT</text>
+<!-- Conveyor Belt 1 -->
+<line stroke="#BFC4CA" stroke-dasharray="6 4" stroke-width="4" x1="42" x2="160" y1="160" y2="160"></line>
+<circle cx="42" cy="160" fill="#6EAAFF" r="5"></circle>
+<circle cx="160" cy="160" fill="#6EAAFF" r="5"></circle>
+<!-- Pan Mixer Unit -->
+<rect fill="#0A5FAE" height="50" rx="4" stroke="#6EAAFF" stroke-width="1.5" width="60" x="145" y="105"></rect>
+<circle cx="175" cy="130" fill="#001853" r="16" stroke="#6EAAFF" stroke-width="1"></circle>
+<path d="M 167 130 L 183 130 M 175 122 L 175 138" stroke="#00FFA3" stroke-width="2"></path>
+<text fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="175" y="98">PAN MIXER</text>
+<!-- Transfer Chute -->
+<line stroke="#6EAAFF" stroke-dasharray="3 3" stroke-width="3" x1="175" x2="245" y1="155" y2="195"></line>
+<!-- High-Tonnage Hydraulic Press -->
+<rect fill="#132D73" height="110" stroke="#6EAAFF" stroke-width="2" width="70" x="230" y="140"></rect>
+<!-- Hydraulic Ram Cylinder -->
+<rect fill="#0A5FAE" height="35" stroke="#6EAAFF" stroke-width="1.5" width="26" x="252" y="115"></rect>
+<line stroke="#FFD700" stroke-width="3" x1="265" x2="265" y1="110" y2="90"></line>
+<!-- Die Mold Cavity -->
+<rect fill="#001037" height="30" stroke="#00FFA3" stroke-width="1.5" width="50" x="240" y="200"></rect>
+<text fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="265" y="170">HYDRAULIC</text>
+<text fill="#FFD700" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle" x="265" y="182">3000 PSI</text>
+<!-- Palletizer Conveyor Outfeed -->
+<line stroke="#BFC4CA" stroke-dasharray="6 4" stroke-width="4" x1="300" x2="390" y1="225" y2="225"></line>
+<!-- Calibrated Finished Brick Stack on Pallet -->
+<rect fill="#6EAAFF" height="10" stroke="#ffffff" stroke-width="0.8" width="22" x="330" y="195"></rect>
+<rect fill="#6EAAFF" height="10" stroke="#ffffff" stroke-width="0.8" width="22" x="354" y="195"></rect>
+<rect fill="#A6C8FF" height="10" stroke="#ffffff" stroke-width="0.8" width="22" x="342" y="183"></rect>
+<rect fill="#203E91" height="10" stroke="#ffffff" stroke-width="0.8" width="22" x="330" y="207"></rect>
+<rect fill="#203E91" height="10" stroke="#ffffff" stroke-width="0.8" width="22" x="354" y="207"></rect>
+<text fill="#00FFA3" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="354" y="174">PALLET STACK</text>
+<!-- Hydration Mist Chamber Indicator -->
+<path d="M 330,250 Q 355,240 380,250" stroke="#00FFA3" stroke-dasharray="2 2" stroke-width="1.5"></path>
+<text fill="#6EAAFF" font-family="monospace" font-size="8" text-anchor="middle" x="355" y="265">Hydration Curing</text>
+<!-- Stage Direction Markers -->
+<path d="M 125,160 L 138,160 M 132,156 L 138,160 L 132,164" stroke="#FFD700" stroke-width="1.5"></path>
+<path d="M 210,180 L 222,187 M 216,180 L 222,187 L 214,190" stroke="#FFD700" stroke-width="1.5"></path>
+<path d="M 305,225 L 318,225 M 312,221 L 318,225 L 312,229" stroke="#FFD700" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 text-xs font-label-code">
+<span class="text-slate-300">Continuous Automated Cycling</span>
+<span class="text-secondary-container">Muthalipalayam, Arasur Facility</span>
+</div>
+</div>
+<!-- Step-by-Step Flow Matrix -->
+<div class="lg:col-span-6 flex flex-col justify-between gap-4">
+<!-- Step 1 -->
+<div class="p-5 bg-surface-container-low border-l-4 border-primary hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-xs text-secondary font-bold">STAGE 01</span>
+<span class="font-label-code text-[11px] text-outline">RAW INVENTORY</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary">Class-F Fly Ash &amp; Binder Batching</h4>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Pulverized fuel ash, 53-grade Ordinary Portland Cement, graded river aggregate, and water are mixed under automated load-cell sensors for uniform moisture.
+              </p>
+</div>
+<!-- Step 2 -->
+<div class="p-5 bg-surface-container-low border-l-4 border-secondary hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-xs text-secondary font-bold">STAGE 02</span>
+<span class="font-label-code text-[11px] text-outline">MULTI-TONNAGE COMPACTION</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary">Hydraulic High-Pressure Moulding</h4>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Automated hydraulic block press compresses the aggregate mix with dual-vibration cycles, squeezing out microscopic air voids and honeycombing.
+              </p>
+</div>
+<!-- Step 3 -->
+<div class="p-5 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-xs text-secondary font-bold">STAGE 03</span>
+<span class="font-label-code text-[11px] text-outline">HYDRATION BONDING</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary">Precision Non-Combustion Curing</h4>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Bricks are cured through calibrated water showering and steam stabilization for 14-21 days, gaining permanent stone-like compressive molecular bonds without kiln fuel.
+              </p>
+</div>
+<!-- Step 4 -->
+<div class="p-5 bg-surface-container-low border-l-4 border-emerald-600 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-xs text-emerald-700 font-bold">STAGE 04</span>
+<span class="font-label-code text-[11px] text-outline">LOGISTICS QA</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary">Palletized Dispatch &amp; Batch Testing</h4>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Random batch units undergo compressive crushing tests in our plant laboratory before heavy flatbed loading for jobsite courier across Coimbatore.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION D — THE 7 CORE SPECIALTIES (VERBATIM BROCHURE PILLARS) -->
+<section class="w-full py-20 bg-surface-container-low border-b border-surface-container-high" id="specialties">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div>
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Seven Engineering Pillars</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl text-primary font-bold tracking-tight">
+              SPECIALITIES
+            </h2>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-xl">
+              Verbatim core strengths proven in the official Brixion catalogue. Engineered to solve traditional masonry failures.
+            </p>
+</div>
+<span class="font-label-code text-xs text-outline uppercase">IS:12894 STANDARD SPEC</span>
+</div>
+<!-- 7 Core Specialty Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Specialty 1: High Strength & Durability -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-secondary shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-5 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">shield</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary uppercase font-bold">Speciality 01</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">High Strength &amp; Durability</h3>
+<p class="font-body-md text-on-surface-variant">
+                Hydraulically compressed density delivers 10-12 MPa compressive strength. Completely eliminates breakages and transit waste.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>LOAD-BEARING CLASS</span>
+<span class="text-secondary font-bold">&gt; 10 MPa</span>
+</div>
+</div>
+<!-- Specialty 2: Eco-Friendly -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-emerald-600 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-emerald-800 text-white flex items-center justify-center mb-5 group-hover:bg-emerald-600 transition-colors">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<span class="font-label-code text-[11px] text-emerald-700 uppercase font-bold">Speciality 02</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">Eco-Friendly</h3>
+<p class="font-body-md text-on-surface-variant">
+                Formulated using industrial thermal fly ash. Preserves essential agricultural soil and qualifies developers for green building incentives.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>CIRCULAR ECONOMY</span>
+<span class="text-emerald-700 font-bold">100% Recycled Ash</span>
+</div>
+</div>
+<!-- Specialty 3: Smooth Finish -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-secondary shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-5 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">texture</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary uppercase font-bold">Speciality 03</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">Smooth Finish</h3>
+<p class="font-body-md text-on-surface-variant">
+                Pristine flat surface allows direct wall putty application or single-coat thin plastering, completely avoiding uneven thick sand plaster.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>FINISHING COAT</span>
+<span class="text-secondary font-bold">Direct Putty Ready</span>
+</div>
+</div>
+<!-- Specialty 4: Low Water Absorption -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-secondary shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-5 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary uppercase font-bold">Speciality 04</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">Low Water Absorption</h3>
+<p class="font-body-md text-on-surface-variant">
+                Under 8-10% water suction benchmark protects masonry against wall dampness, paint peeling, fungal decay, and efflorescence saltpetre.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>WATER SUCTION</span>
+<span class="text-secondary font-bold">&lt; 10% Certified</span>
+</div>
+</div>
+<!-- Specialty 5: Uniform Size & Shape -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-secondary shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-5 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">square_foot</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary uppercase font-bold">Speciality 05</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">Uniform Size &amp; Shape</h3>
+<p class="font-body-md text-on-surface-variant">
+                Exact engineered tolerances with sharp 90-degree chamfer edges allow rapid coursing, razor plumb-lines, and thinner mortar joints.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>GEOMETRIC TOLERANCE</span>
+<span class="text-secondary font-bold">± 0.5 mm</span>
+</div>
+</div>
+<!-- Specialty 6: Cost-Effective -->
+<div class="bg-white p-7 border border-outline-variant/60 hover:border-secondary shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-5 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+<span class="font-label-code text-[11px] text-secondary uppercase font-bold">Speciality 06</span>
+<h3 class="font-title-spec text-xl font-bold text-primary mt-1 mb-2">Cost-Effective</h3>
+<p class="font-body-md text-on-surface-variant">
+                Reduces total structural masonry bills by up to 35% through thinner joints, zero onsite rubble breakage, and faster construction cycles.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-surface-container flex items-center justify-between text-xs font-label-code text-outline">
+<span>ESTIMATED SAVINGS</span>
+<span class="text-secondary font-bold">Up to 35% ROI</span>
+</div>
+</div>
+<!-- Specialty 7: No Firing Needed (Full Width Feature) -->
+<div class="bg-primary text-white p-8 border border-secondary/40 shadow-md md:col-span-2 lg:col-span-3 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 bg-secondary text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">local_fire_department</span>
+</div>
+<div>
+<span class="font-label-code text-xs text-secondary-container uppercase font-bold">Speciality 07</span>
+<h3 class="font-headline-sm text-2xl font-bold text-white mt-0.5">No Firing Needed</h3>
+<p class="font-body-md text-slate-300 mt-1 max-w-3xl leading-relaxed">
+                  Hydraulic compression combined with controlled moisture hydration cures bricks to natural strength without smoky coal chimneys, making Brixion the future-proof building block for compliant smart cities.
+                </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container hover:bg-white px-6 py-3.5 font-label-caps text-xs uppercase tracking-wider font-bold shrink-0 transition-colors" href="#factory-procurement">
+<span>Order Specimen Sample</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECTION E — CERTIFIED BENCHMARK COMPARISON TABLE ("DIFFERENCE BETWEEN NORMAL BRICKS AND FLY ASH BRICKS") -->
+<section class="w-full py-20 bg-surface border-b border-surface-container-high" id="comparison-matrix">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Technical Benchmark</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-primary font-bold tracking-tight">
+            DIFFERENCE BETWEEN NORMAL BRICKS AND FLY ASH BRICKS
+          </h2>
+<p class="font-body-md text-on-surface-variant mt-3">
+            Direct reproduction from the Brixion engineering publication, verifying field measurements against standard burnt clay red bricks.
+          </p>
+</div>
+<div class="overflow-x-auto shadow-xl border border-outline-variant/60 bg-white">
+<table class="w-full text-left border-collapse" id="spec-sheet">
+<thead>
+<tr class="bg-primary text-white">
+<th class="py-4 px-6 font-title-spec text-sm uppercase tracking-wider font-bold w-1/4">FEATURE</th>
+<th class="py-4 px-6 font-title-spec text-sm uppercase tracking-wider font-bold bg-secondary text-white w-3/8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-lg">verified</span>
+<span>FLY ASH BRICKS (BRIXION)</span>
+</div>
+</th>
+<th class="py-4 px-6 font-title-spec text-sm uppercase tracking-wider font-bold text-slate-300 w-3/8">
+                  NORMAL CLAY BRICKS
+                </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-sm sm:text-base text-on-surface">
+<!-- 1. STRENGTH -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">shield</span>
+                  STRENGTH
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-label-code font-bold">SUPERIOR</span>
+<span>High (10 - 12 MPa)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  Moderate (3.5 - 5 MPa)
+                </td>
+</tr>
+<!-- 2. WATER ABSORPTION -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">water_drop</span>
+                  WATER ABSORPTION
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-label-code font-bold">CLASS-A</span>
+<span>Low (&lt; 10%)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  High (15% - 25% Sponge Rate)
+                </td>
+</tr>
+<!-- 3. SHAPE & SIZE -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">square_foot</span>
+                  SHAPE &amp; SIZE
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+                  Uniform (Die-Cast Precision)
+                </td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  Irregular (Warped shrinkage / uneven)
+                </td>
+</tr>
+<!-- 4. SURFACE FINISH -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">texture</span>
+                  SURFACE FINISH
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+                  Smooth (Direct Putty Finish Ready)
+                </td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  Rough (Demands Thick Sand Plastering)
+                </td>
+</tr>
+<!-- 5. ECO-FRIENDLY -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-lg">eco</span>
+                  ECO-FRIENDLY
+                </td>
+<td class="py-4 px-6 font-bold text-emerald-700 bg-secondary-container/10">
+                  Yes (Zero Kiln Burning, Preserves Topsoil)
+                </td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  No (Depletes Fertile Topsoil, Emits Kiln Flue Gas)
+                </td>
+</tr>
+<!-- 6. MORTAR USAGE -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">layers</span>
+                  MORTAR USAGE
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+                  Less (Thin 3 - 6 mm Joint)
+                </td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  More (Thick 12 - 18 mm Bed)
+                </td>
+</tr>
+<!-- 7. DURABILITY -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">verified</span>
+                  DURABILITY
+                </td>
+<td class="py-4 px-6 font-bold text-secondary bg-secondary-container/10">
+                  High (No Efflorescence / Weathering)
+                </td>
+<td class="py-4 px-6 text-on-surface-variant">
+                  Moderate (Prone to Spalling / Cracking)
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- 7. SECTION F — WHY CHOOSE US (6 VERIFIED PILLARS) -->
+<section class="w-full py-20 bg-surface-container-low border-b border-surface-container-high" id="why-choose-us">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div>
+<span class="font-label-caps text-xs text-secondary uppercase tracking-widest font-bold block mb-2">Commercial Partnership</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl text-primary font-bold tracking-tight">
+              WHY CHOOSE US ?
+            </h2>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-xl">
+              Backed by our certified Coimbatore supply chain and heavy commercial fleet logistics.
+            </p>
+</div>
+<span class="font-label-code text-xs text-outline uppercase font-semibold">ARASUR LOGISTICS CORRIDOR</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Pillar 1: Premium Quality Bricks -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Premium Quality Bricks</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                Lab-certified aggregate mix, free from organic salts and clay impurities for unyielding masonry strength.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              ASSURED SPECIFICATION
+            </div>
+</div>
+<!-- Pillar 2: Strong and Durable -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">fitness_center</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Strong and Durable</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                Engineered to resist structural deflection, seismic vibration, and heavy lateral wind loads over decades.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              10-12 MPa COMPRESSIVE
+            </div>
+</div>
+<!-- Pillar 3: Suitable for All Construction Works -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">domain</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Suitable for All Construction Works</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                Approved for multistory RCC infill, boundary walls, foundation footings, and architectural partitions.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              UNIVERSAL APPLICATION
+            </div>
+</div>
+<!-- Pillar 4: Reliable Supply -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">conveyor_belt</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Reliable Supply</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                50,000+ daily units production ensures no project site halts or delivery bottlenecks in peak seasons.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              50,000+ UNITS / DAY
+            </div>
+</div>
+<!-- Pillar 5: Timely Delivery -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Timely Delivery</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                Direct fleet transport with dedicated hydraulic crane unloading right onto your jobsite floor.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              DEDICATED FLEET LOGISTICS
+            </div>
+</div>
+<!-- Pillar 6: Competitive Pricing -->
+<div class="p-6 bg-white border border-outline-variant/60 shadow-sm flex flex-col justify-between group hover:border-secondary transition-all">
+<div>
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">price_check</span>
+</div>
+<h4 class="font-title-spec text-lg font-bold text-primary mb-2">Competitive Pricing</h4>
+<p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                Direct factory gate invoice rates with transparent volumetric slabs for structural engineers and builders.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container text-[11px] font-label-code text-secondary font-bold">
+              TRANSPARENT GATE RATES
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. SECTION G — FACTORY DIRECT REQUISITION & DISPATCH CORRIDOR -->
+<section class="w-full py-20 bg-surface" id="factory-procurement">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-primary text-white p-8 lg:p-12 shadow-2xl border border-secondary/30 relative overflow-hidden">
+<div class="absolute inset-0 blueprint-grid-dark opacity-20 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Info Column -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+<div>
+<span class="font-label-caps text-xs text-secondary-container uppercase tracking-widest font-bold block mb-2">Direct Despatch Office</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                  PROCURE FACTORY DIRECT SHIPMENTS
+                </h2>
+<p class="font-body-md text-slate-300 mt-4 leading-relaxed">
+                  Connect directly with the manufacturing plant floor in Muthalipalayam, Arasur. We provide batch testing certificates, freight dispatch schedules, and commercial wholesale rates.
+                </p>
+</div>
+<!-- Official Address & Helplines (Verbatim) -->
+<div class="space-y-4 pt-4 border-t border-white/10">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-secondary/30 text-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase tracking-wider block">Plant &amp; Registered Office</span>
+<p class="font-title-spec text-sm font-semibold text-white">
+                      Muthalipalayam, Arasur,<br/>Coimbatore, Tamil Nadu 641 407.
+                    </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-secondary/30 text-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+</div>
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase tracking-wider block">Direct Despatch Hotlines</span>
+<div class="flex flex-wrap gap-x-4 gap-y-1 font-title-spec text-sm font-bold text-secondary-container">
+<a class="hover:underline" href="tel:9363012813">+91 93630 12813</a>
+<a class="hover:underline" href="tel:9361923622">+91 93619 23622</a>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-secondary/30 text-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div>
+<span class="font-label-code text-[10px] text-slate-400 uppercase tracking-wider block">Operating Hours</span>
+<p class="font-body-sm text-xs text-slate-200">Mon - Sat: 08:00 AM - 07:30 PM (Direct Site Dispatch Available 24/7)</p>
+</div>
+</div>
+</div>
+<div class="p-3 bg-white/5 border border-white/10 text-xs font-label-code text-secondary-fixed-dim">
+                FAST TRUCKLOAD DISPATCH: Sulur · Avinashi · Tirupur · Palladam · Pollachi · Coimbatore Central
+              </div>
+</div>
+<!-- Right Interactive Form Column -->
+<div class="lg:col-span-7 bg-white text-on-surface p-6 sm:p-8 shadow-xl">
+<div class="flex items-center justify-between mb-4 border-b border-surface-container pb-3">
+<span class="font-title-spec text-base font-bold text-primary uppercase">Factory Despatch Requisition</span>
+<span class="font-label-code text-xs text-secondary font-bold">2-HOUR QUOTE RESPONSE</span>
+</div>
+<form class="space-y-4" id="procurement-form" onsubmit="event.preventDefault(); alert('Requisition Submitted Successfully. A Brixion logistics officer is calculating freight to your site.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-xs text-primary font-bold block mb-1 uppercase">Full Name / Contractor</label>
+<input class="w-full bg-surface-container-low border border-outline-variant px-3.5 py-2.5 font-body-md text-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="e.g. Er. Ramesh Kumar" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-xs text-primary font-bold block mb-1 uppercase">Phone Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant px-3.5 py-2.5 font-body-md text-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="+91 98430 XXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-xs text-primary font-bold block mb-1 uppercase">Order Quantity (Bricks)</label>
+<select class="w-full bg-surface-container-low border border-outline-variant px-3.5 py-2.5 font-body-md text-sm text-on-surface focus:outline-none focus:border-secondary">
+<option value="5000">5,000 Units (Mini Flatbed)</option>
+<option selected="" value="10000">10,000 Units (Single Truckload)</option>
+<option value="25000">25,000 Units (Commercial Lot)</option>
+<option value="50000">50,000+ Units (Bulk Infrastructure)</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-xs text-primary font-bold block mb-1 uppercase">Delivery Site Location</label>
+<input class="w-full bg-surface-container-low border border-outline-variant px-3.5 py-2.5 font-body-md text-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="e.g. Saravanampatti, Coimbatore" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-xs text-primary font-bold block mb-1 uppercase">Project Details / Structural Requirements</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant px-3.5 py-2.5 font-body-md text-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="Specify if test certificates, crane unloading, or staggered weekend dispatches are required..." rows="3"></textarea>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-1.5 text-xs font-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-emerald-600">verified_user</span>
+<span>100% Guaranteed Factory Direct Rates</span>
+</div>
+<button class="inline-flex items-center gap-2 bg-secondary hover:bg-primary text-white px-8 py-3 font-label-caps text-xs uppercase tracking-widest font-bold transition-all shadow-md active:translate-y-0.5" type="submit">
+<span>Submit Requisition</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. SECTION H — ARCHITECTURAL DARK FOOTER -->
+<footer class="w-full bg-[#000e2e] text-white border-t border-secondary/20">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+<!-- Big Corporate Slogan Banner -->
+<div class="pb-12 border-b border-white/10 mb-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<span class="font-label-code text-xs text-secondary-container uppercase tracking-widest block mb-1">Corporate Mission &amp; Motto</span>
+<p class="font-display-hero text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-white">
+              BUILD STRONG. BUILD SMART.<br/>
+<span class="text-secondary-container">CHOOSE BRIXION BRICKS.</span>
+</p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex items-center gap-2 bg-white text-primary hover:bg-secondary-container px-6 py-3 font-label-caps text-xs uppercase tracking-wider font-bold transition-colors shadow-lg" href="#factory-procurement">
+<span>Book Site Visit</span>
+<span class="material-symbols-outlined text-base">near_me</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12 font-body-sm text-sm">
+<!-- Col 1: Brand & Vector Mark -->
+<div class="lg:col-span-4 space-y-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 bg-primary-container border border-secondary/40 p-1 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 60 60">
+<polygon fill="#001853" points="10,8 36,8 46,18 46,27 34,29 48,34 48,46 36,52 10,52"></polygon>
+<polygon fill="#6EAAFF" points="12,10 35,10 43,18 33,27 12,27"></polygon>
+<polygon fill="#203E91" points="12,29 33,29 45,35 45,44 35,50 12,50"></polygon>
+</svg>
+</div>
+<span class="font-headline-sm text-lg uppercase font-bold text-white tracking-wider">BRIXION BRICKS AND BLOCKS LLP</span>
+</div>
+<p class="text-slate-400 max-w-sm leading-relaxed text-xs">
+            Pioneering automated industrial fly ash bricks in Coimbatore. IS:12894:2002 certified masonry units for high-rise commercial structures and modern residential engineering.
+          </p>
+<div class="font-label-code text-xs text-secondary-container">
+            LLP Identification: Verified Manufacturing Unit Arasur
+          </div>
+</div>
+<!-- Col 2: Plant Location & Contacts -->
+<div class="lg:col-span-3 space-y-2">
+<span class="font-label-caps text-xs uppercase text-secondary-fixed tracking-wider block mb-2 font-bold">Plant &amp; Registered Office</span>
+<p class="text-slate-300 text-xs leading-relaxed">
+            Muthalipalayam, Arasur,<br/>
+            Coimbatore, Tamil Nadu 641 407,<br/>
+            India.
+          </p>
+<div class="pt-2 flex flex-col gap-1 text-xs">
+<span class="text-slate-400 font-label-code">Despatch Desk:</span>
+<a class="text-secondary-container hover:underline font-semibold" href="tel:9363012813">+91 93630 12813</a>
+<a class="text-secondary-container hover:underline font-semibold" href="tel:9361923622">+91 93619 23622</a>
+</div>
+</div>
+<!-- Col 3: Navigation -->
+<div class="lg:col-span-2 space-y-2">
+<span class="font-label-caps text-xs uppercase text-secondary-fixed tracking-wider block mb-2 font-bold">Quick Navigation</span>
+<ul class="space-y-1.5 text-xs text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#hero-3d">3D CAD Explorer</a></li>
+<li><a class="hover:text-white transition-colors" href="#brand-architecture">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#product-showcase">Fly Ash Specifications</a></li>
+<li><a class="hover:text-white transition-colors" href="#manufacturing-process">Hydraulic Process</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialties">Specialities</a></li>
+<li><a class="hover:text-white transition-colors" href="#comparison-matrix">Clay vs Fly Ash</a></li>
+<li><a class="hover:text-white transition-colors" href="#factory-procurement">Request Quote</a></li>
+</ul>
+</div>
+<!-- Col 4: Standard Assurances -->
+<div class="lg:col-span-3 space-y-2">
+<span class="font-label-caps text-xs uppercase text-secondary-fixed tracking-wider block mb-2 font-bold">Standard Assurances</span>
+<ul class="space-y-1.5 text-xs text-slate-400 font-label-code">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-emerald-400">check</span>
+<span>IS:12894:2002 National Benchmark</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-emerald-400">check</span>
+<span>10 - 12 N/mm² Crushing Strength</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-emerald-400">check</span>
+<span>Sub-10% Low Water Absorption</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-emerald-400">check</span>
+<span>Zero-Kiln Green Building Certified</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-code text-xs text-slate-400">
+<p>© 2025 BRIXION BRICKS AND BLOCKS LLP. ALL RIGHTS RESERVED.</p>
+<div class="flex items-center gap-4 text-secondary-fixed-dim">
+<span>Engineered Precision Masonry</span>
+<span>·</span>
+<span>Arasur Plant Facility</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Real-time Calculator Script -->
+<script>
+    (function initBrixionInteractions() {
+      const calcSqft = document.getElementById('calc-sqft');
+      const calcThickness = document.getElementById('calc-thickness');
+      const resBricks = document.getElementById('res-bricks');
+      const resWeight = document.getElementById('res-weight');
+
+      function updateCalculator() {
+        if (!calcSqft || !calcThickness || !resBricks || !resWeight) return;
+        const sqft = parseFloat(calcSqft.value) || 0;
+        const thickness = parseFloat(calcThickness.value) || 9;
+        
+        // Standard brick calculation: 4.5" wall ~ 4.35 bricks/sqft; 9" wall ~ 8.65 bricks/sqft (incl 3% wastage)
+        const multiplier = thickness === 4.5 ? 4.35 : 8.65;
+        const totalBricks = Math.round(sqft * multiplier);
+        const totalWeightTonnes = ((totalBricks * 3.25) / 1000).toFixed(1);
+
+        resBricks.textContent = totalBricks.toLocaleString();
+        resWeight.textContent = totalWeightTonnes + ' T';
+      }
+
+      if (calcSqft) calcSqft.addEventListener('input', updateCalculator);
+      if (calcThickness) calcThickness.addEventListener('change', updateCalculator);
+      updateCalculator();
+    })();
+  </script>
+</body></html>
+

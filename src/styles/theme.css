@@ -1,0 +1,89 @@
+/* ===== BRIXION BRICKS AND BLOCKS LLP — AUTHENTIC INDUSTRIAL COLOR SYSTEM ===== */
+:root {
+  /* Exact Logo-Derived Palette */
+  --brixion-cobalt: #0052CC;        /* Vibrant Cobalt Blue (Top 'B') */
+  --brixion-cobalt-dark: #003E99;   /* Deep Cobalt */
+  --brixion-cerulean: #0284C7;      /* Electric Cerulean Highlight Line */
+  --brixion-navy: #0C192E;          /* Deep Industrial Steel Navy (Navbar, Footer, Base Badge) */
+  --brixion-navy-surface: #13243F;  /* Navy Panel Surface */
+  
+  /* Concrete & Masonry Textures */
+  --brixion-concrete: #7E8B9B;      /* Concrete Texture Tone (Lower 'B') */
+  --brixion-concrete-light: #CBD5E1;/* Mortar & Concrete Edge */
+  --brixion-body-bg: #F1F3F6;       /* Architectural Light Concrete Body Background */
+  --brixion-body-alt: #E6EAF0;      /* Section Contrast Concrete Grey */
+  --brixion-card-bg: #FFFFFF;       /* Crisp White Structural Cards */
+  
+  /* Typography Colors */
+  --brixion-text-heading: #0C192E;  /* Bold Industrial Navy */
+  --brixion-text-body: #334155;     /* High-legibility Slate Body Text */
+  --brixion-text-muted: #64748B;    /* Technical Specification Muted Text */
+  --brixion-border: #E2E8F0;        /* Sharp 1px Structural Divider */
+  --brixion-border-accent: #0052CC;
+
+  /* Typography Fonts */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Elevation (Clean Industrial Shadows - No Cheesy Glows) */
+  --shadow-sm: 0 1px 2px 0 rgba(12, 25, 46, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(12, 25, 46, 0.08), 0 2px 6px -2px rgba(12, 25, 46, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(12, 25, 46, 0.12), 0 4px 8px -2px rgba(12, 25, 46, 0.06);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--brixion-body-bg);
+  color: var(--brixion-text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--brixion-body-bg);
+  color: var(--brixion-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--brixion-text-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  max-width: 70ch;
+  color: var(--brixion-text-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brixion-cobalt);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

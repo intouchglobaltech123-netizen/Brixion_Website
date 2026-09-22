@@ -1,0 +1,442 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brixion-cobalt: #0052CC;
+  --color-brixion-cobalt-dark: #003E99;
+  --color-brixion-cerulean: #0284C7;
+  --color-brixion-navy: #0C192E;
+  --color-brixion-navy-surface: #13243F;
+  --color-brixion-concrete: #7E8B9B;
+  --color-brixion-concrete-light: #CBD5E1;
+  --color-brixion-body-bg: #F1F3F6;
+  --color-brixion-body-alt: #E6EAF0;
+  --color-brixion-card-bg: #FFFFFF;
+
+  --color-bg-deep: #F1F3F6;
+  --color-bg-surface: #E6EAF0;
+  --color-bg-panel: #FFFFFF;
+
+  --color-accent: #0052CC;
+  --color-accent-light: #0284C7;
+
+  --color-text-primary: #0C192E;
+  --color-text-body: #334155;
+  --color-text-muted: #64748B;
+
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+:root {
+  --brixion-navy: #0C192E;
+  --brixion-cobalt: #0052CC;
+  --brixion-cerulean: #0284C7;
+  --brixion-body-bg: #F1F3F6;
+  --brixion-body-alt: #E6EAF0;
+  --brixion-card-bg: #FFFFFF;
+  --brixion-text-heading: #0C192E;
+  --brixion-text-body: #334155;
+  --brixion-text-muted: #64748B;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #F1F3F6 !important;
+  color: #334155 !important;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #0C192E;
+  letter-spacing: -0.025em;
+}
+
+/* Architectural Grid Pattern */
+.bg-blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(12, 25, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(12, 25, 46, 0.04) 1px, transparent 1px);
+}
+
+.bg-blueprint-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Solid Industrial Cobalt Button */
+.btn-primary-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  background-color: #0052CC !important;
+  color: #ffffff !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  border-radius: 0.375rem;
+  border: 1px solid #0047BA;
+  box-shadow: 0 2px 4px rgba(0, 82, 204, 0.2);
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.btn-primary-blue:hover {
+  background-color: #004099 !important;
+  border-color: #003380;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.35);
+}
+
+/* Crisp Industrial Outline Button */
+.btn-outline-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  background-color: #FFFFFF !important;
+  color: #0C192E !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  border-radius: 0.375rem;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.btn-outline-navy:hover {
+  background-color: #F8FAFC !important;
+  border-color: #0052CC;
+  color: #0052CC !important;
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0052CC;
+}
+
+:focus-visible {
+  outline: 2px solid #0052CC;
+  outline-offset: 2px;
+}
+
+/* Glassmorphism surfaces from Stitch design */
+.glass-card {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-btn {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.brick-stamp-text {
+  color: rgba(30, 41, 59, 0.78);
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25), -1px -1px 0px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+}
+
+/* Stitch Navigation Bar Utilities (Favorite Reference Spec) */
+.nav-banner {
+  box-shadow: 0 16px 36px -12px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+}
+
+.cta-polygon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0b60e6 0%, #0045b5 100%);
+  box-shadow: 0 8px 20px -3px rgba(11, 96, 230, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
+  border-radius: 6px;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.cta-polygon-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.cyan-slashes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  background: linear-gradient(115deg, transparent 40%, rgba(56, 189, 248, 0.2) 42%, rgba(56, 189, 248, 0.2) 50%, transparent 52%, rgba(56, 189, 248, 0.3) 54%, rgba(56, 189, 248, 0.3) 62%, transparent 64%);
+  z-index: 7;
+}
+
+.construction-cutout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 36px;
+  right: 0;
+  clip-path: polygon(68px 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+  z-index: 6;
+}
+
+.motto-wedge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 185px;
+  clip-path: polygon(48px 0, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(135deg, #001e4a 0%, #00122e 100%);
+  border-left: 3px solid #0284c7;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 18px;
+}
+
+/* 3D Chrome Text Effect & Metallic Specs for Starred Header */
+.chrome-text {
+  background: linear-gradient(180deg, #ffffff 0%, #d8e5f2 35%, #56728c 50%, #b2c9df 65%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.8)) drop-shadow(0 4px 6px rgba(0, 30, 80, 0.6));
+}
+
+.chrome-letter-b {
+  background: linear-gradient(170deg, #f0f7ff 0%, #b8d5f3 30%, #466788 52%, #95b6d8 65%, #e9f2fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-badge-frame {
+  box-shadow: 
+    0 0 0 1.5px #7496ba, 
+    0 0 0 3px #132a4a, 
+    0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.construction-cut {
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.accent-stripe {
+  clip-path: polygon(42% 0, 58% 0, 16% 100%, 0 100%);
+}
+
+.navy-top-badge {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.skew-cta-btn {
+  transform: skewX(-20deg);
+}
+
+.skew-cta-inner {
+  transform: skewX(20deg);
+}
+
+/* User Provided Custom Shapes & 3D Chamfered Button Effects */
+.clip-construction-slant {
+  clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clip-navy-badge {
+  clip-path: polygon(24px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.diagonal-line-1 {
+  position: absolute;
+  top: -20px;
+  right: 43%;
+  width: 32px;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(30, 90, 180, 0.28) 0%, rgba(30, 90, 180, 0) 100%);
+  transform: rotate(26deg);
+  pointer-events: none;
+}
+
+.diagonal-line-2 {
+  position: absolute;
+  top: -30px;
+  right: 38%;
+  width: 45px;
+  height: 220px;
+  background: linear-gradient(135deg, rgba(30, 100, 200, 0.22) 0%, rgba(30, 100, 200, 0.02) 100%);
+  transform: rotate(26deg);
+  pointer-events: none;
+}
+
+.btn-3d-quote {
+  position: relative;
+  background: linear-gradient(180deg, #0056b3 0%, #003882 100%);
+  border-radius: 8px;
+  transform: skewX(-14deg);
+  box-shadow: 
+    0 4px 10px rgba(0, 56, 130, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-3d-quote::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 3px;
+  bottom: 3px;
+  width: 6px;
+  background: #0080ff;
+  border-radius: 3px;
+  filter: blur(1px);
+}
+
+.btn-3d-quote:hover {
+  background: linear-gradient(180deg, #0066d6 0%, #00439c 100%);
+  box-shadow: 
+    0 6px 14px rgba(0, 56, 130, 0.45),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.btn-3d-content {
+  transform: skewX(14deg);
+}
+
+/* Exact Reference Spec from User Screenshot */
+.far-left-navy-wedge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 95px;
+  background: linear-gradient(135deg, #021a3a 0%, #010f26 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  z-index: 5;
+}
+
+.far-left-blue-stripe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  background: linear-gradient(135deg, #005bb5 0%, #003a7a 100%);
+  clip-path: polygon(0 0, 100% 100%, 65% 100%, 0 0);
+  z-index: 4;
+}
+
+.ref-cyan-ribbon-1 {
+  position: absolute;
+  top: -30px;
+  right: 43%;
+  width: 48px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35) 0%, rgba(56, 189, 248, 0) 100%);
+  transform: rotate(28deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ref-cyan-ribbon-2 {
+  position: absolute;
+  top: -40px;
+  right: 37%;
+  width: 65px;
+  height: 270px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0.02) 100%);
+  transform: rotate(28deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ref-construction-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 46%;
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 6;
+  overflow: hidden;
+}
+
+.ref-top-navy-motto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 190px;
+  height: 100%;
+  clip-path: polygon(42px 0, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(135deg, #021430 0%, #010c1e 100%);
+  border-left: 3.5px solid #0088ff;
+  box-shadow: -4px 0 14px rgba(0, 136, 255, 0.4);
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 36px;
+  padding-right: 18px;
+}
+
+
+
+
+
+
