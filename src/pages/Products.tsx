@@ -511,74 +511,80 @@ export default function Products() {
             />
           </div>
 
-          {/* 3 Application Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+          {/* 3 Application Cards — 100% Uniform Composition & Visual Treatment */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 num: '01',
-                title: 'Residential Construction',
-                desc: 'Suitable for general residential construction requirements.',
+                tag: 'APPLICATION 01',
+                title: 'RESIDENTIAL',
+                desc: 'Built for everyday residential construction.',
                 src: '/assets/app-residential.jpg',
                 alt: 'Residential house under construction with grey fly ash brick masonry walls'
               },
               {
                 num: '02',
-                title: 'Commercial Construction',
-                desc: 'Suitable for general commercial building construction.',
+                tag: 'APPLICATION 02',
+                title: 'COMMERCIAL',
+                desc: 'Built for high-capacity commercial developments.',
                 src: '/assets/app-commercial.jpg',
                 alt: 'Multi-storey commercial building under construction with brick masonry'
               },
               {
                 num: '03',
-                title: 'Industrial Construction',
-                desc: 'Suitable for general industrial construction works.',
+                tag: 'APPLICATION 03',
+                title: 'INDUSTRIAL',
+                desc: 'Built for heavy-duty industrial facilities.',
                 src: '/assets/app-industrial.jpg',
                 alt: 'Industrial warehouse building with large brick masonry walls'
               }
             ].map((app, idx) => (
               <motion.div
                 key={app.num}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.7, delay: 0.15 + idx * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative rounded-2xl overflow-hidden cursor-default"
+                transition={{ duration: 0.6, delay: idx * 0.12 }}
+                className="group relative rounded-xl overflow-hidden bg-[#0C192E] border border-[#CBD5E1] hover:border-[#0052CC] shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6 sm:p-7"
               >
-                {/* Full-bleed Image */}
-                <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden">
-                  <img
-                    src={app.src}
-                    alt={app.alt}
-                    className="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
-                    loading="lazy"
-                  />
+                {/* Full-bleed Uniform Image */}
+                <img
+                  src={app.src}
+                  alt={app.alt}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
 
-                  {/* Dark gradient overlay */}
-                  <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.1) 70%, transparent 100%)' }} />
+                {/* Identical Uniform Gradient Overlay */}
+                <div 
+                  className="absolute inset-0 pointer-events-none" 
+                  style={{ 
+                    background: 'linear-gradient(to top, rgba(12, 25, 46, 0.95) 0%, rgba(12, 25, 46, 0.65) 45%, rgba(12, 25, 46, 0.15) 75%, transparent 100%)' 
+                  }} 
+                />
 
-                  {/* Number Badge — top left */}
-                  <div className="absolute top-5 left-5 flex items-center gap-2.5">
-                    <span className="w-10 h-10 rounded-lg bg-[#0052CC] flex items-center justify-center text-white font-mono text-sm font-black shadow-lg shadow-[#0052CC]/30 group-hover:shadow-[#0052CC]/50 group-hover:scale-110 transition-all duration-300">
-                      {app.num}
-                    </span>
-                  </div>
-
-                  {/* Content overlay — bottom, slides up on hover */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2">
-                    {/* Blue accent line */}
-                    <div className="w-10 h-[3px] bg-[#38BDF8] rounded-full mb-4 group-hover:w-16 transition-all duration-500 shadow-[0_0_12px_rgba(56,189,248,0.4)]" />
-
-                    <h3 className="text-xl sm:text-2xl font-black font-heading mb-2 tracking-tight drop-shadow-lg" style={{ color: '#ffffff' }}>
-                      {app.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed font-semibold max-w-xs drop-shadow-md" style={{ color: 'rgba(255,255,255,0.95)' }}>
-                      {app.desc}
-                    </p>
-                  </div>
+                {/* Number Badge — Top Right */}
+                <div className="absolute top-5 right-5 z-20">
+                  <span className="text-xs font-mono font-bold text-white/80 bg-[#0C192E]/80 border border-white/15 px-2.5 py-1 rounded backdrop-blur-xs">
+                    {app.num}
+                  </span>
                 </div>
 
-                {/* Bottom border glow on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Uniform Bottom Typography Content Position */}
+                <div className="relative z-20 space-y-2">
+                  <span className="text-[11px] font-mono font-bold text-[#38BDF8] uppercase tracking-widest block">
+                    {app.tag}
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold !text-white font-heading tracking-tight drop-shadow-md uppercase">
+                    {app.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm !text-slate-200 leading-relaxed font-normal opacity-95">
+                    {app.desc}
+                  </p>
+                </div>
+
+                {/* Subtle Hover Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0052CC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30" />
               </motion.div>
             ))}
           </div>

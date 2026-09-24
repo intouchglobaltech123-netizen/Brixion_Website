@@ -102,9 +102,74 @@ export default function MaterialComparisonSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 2. THREE-COLUMN SHOWROOM LAYOUT (LEFT CARD | RAIL | RIGHT CARD)            */}
+        {/* MOBILE-OPTIMIZED COMPARISON CARDS LIST (VISIBLE ON MOBILE ONLY)            */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="block lg:hidden space-y-4">
+          {/* Header Summary Pill */}
+          <div className="p-4 rounded-xl bg-[#090E1B] text-white flex items-center justify-between shadow-md">
+            <div>
+              <span className="text-[10px] font-mono font-bold text-[#35C8F2] uppercase tracking-wider block">
+                COMPARISON SUMMARY
+              </span>
+              <h3 className="text-sm font-bold font-heading text-white">
+                Brixion Fly Ash vs. Traditional Clay
+              </h3>
+            </div>
+            <span className="text-xs font-mono font-bold px-2.5 py-1 rounded bg-[#1078ED] text-white">
+              7 FEATURES
+            </span>
+          </div>
+
+          {/* 7 Feature Comparison Cards */}
+          <div className="space-y-3">
+            {comparisonData.map((item) => (
+              <div
+                key={item.id}
+                className="p-4 rounded-xl bg-white border border-[#CBD5E1] shadow-xs space-y-3"
+              >
+                {/* Feature Label */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <span className="text-xs font-mono font-bold text-[#090E1B] uppercase tracking-wider">
+                    {item.feature}
+                  </span>
+                </div>
+
+                {/* Side-by-side Comparison Values */}
+                <div className="grid grid-cols-2 gap-3 pt-1">
+                  {/* Fly Ash Value */}
+                  <div className="p-2.5 rounded-lg bg-[#F0F7FD] border border-[#1078ED]/30 space-y-0.5">
+                    <span className="text-[10px] font-mono font-bold text-[#1078ED] uppercase block">
+                      FLY ASH BRICK
+                    </span>
+                    <span className="text-xs font-extrabold text-[#1078ED] font-mono block">
+                      {item.flyAshVal}
+                    </span>
+                  </div>
+
+                  {/* Clay Value */}
+                  <div className="p-2.5 rounded-lg bg-[#FFFBEB] border border-[#FDE68A] space-y-0.5">
+                    <span className="text-[10px] font-mono font-bold text-[#B84A28] uppercase block">
+                      CLAY BRICK
+                    </span>
+                    <span className="text-xs font-extrabold text-[#B84A28] font-mono block">
+                      {item.clayVal}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Explanation Footnote */}
+                <p className="text-[11px] text-[#64748B] font-medium leading-relaxed pt-1">
+                  {item.explanation}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ========================================================================= */}
+        {/* 2. THREE-COLUMN SHOWROOM LAYOUT (VISIBLE ON DESKTOP & TABLET)              */}
+        {/* ========================================================================= */}
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* ----------------------------------------------------------------------- */}
           {/* LEFT SIDE: FLY ASH BRICKS CARD                                          */}

@@ -7,6 +7,7 @@ import { PageWrapper } from '../components/ui/PageWrapper';
 import { fadeUp, staggerContainer } from '../components/animations/variants';
 
 import OneProductFocusSection from '../components/OneProductFocusSection';
+import WhyBuildersChooseUsSection from '../components/WhyBuildersChooseUsSection';
 import ProductStageSection from '../components/ProductStageSection';
 import ConstructionJourneySection from '../components/ConstructionJourneySection';
 import BuiltIntoEverydaySection from '../components/BuiltIntoEverydaySection';
@@ -31,9 +32,14 @@ export default function Home() {
           >
             <source src="/assets/hero-video.mp4" type="video/mp4" />
           </video>
-          {/* Left-to-right gradient overlay for text legibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040B18] via-[#040B18]/85 via-45% to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#040A17] via-transparent to-transparent opacity-60" />
+          {/* Directional gradient overlay to keep right side building visible */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(90deg, rgba(5, 12, 22, 0.92) 0%, rgba(5, 12, 22, 0.72) 45%, rgba(5, 12, 22, 0.25) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#040A17] via-transparent to-transparent opacity-40 pointer-events-none" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 w-full">
@@ -43,26 +49,26 @@ export default function Home() {
             animate="visible"
             className="max-w-3xl space-y-6"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/40 backdrop-blur-md">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00A3FF] animate-pulse shadow-[0_0_10px_#00A3FF]" />
-              <span className="text-xs font-mono font-bold tracking-widest text-[#38BDF8] uppercase">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-blue-500/20 border border-blue-400/40 backdrop-blur-md">
+              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#0070F3] animate-pulse shadow-[0_0_8px_#0070F3]" />
+              <span className="text-[11px] sm:text-[12px] font-mono font-bold tracking-widest text-[#38BDF8] uppercase">
                 BRIXION BRICKS AND BLOCKS LLP
               </span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
-              className="text-4xl sm:text-6xl lg:text-7xl font-black !text-white tracking-tight leading-[1.05] uppercase font-heading drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]"
+              className="text-4xl sm:text-5xl lg:text-[62px] xl:text-[64px] font-black !text-white tracking-tight leading-[1.08] uppercase font-heading drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]"
             >
               <span className="!text-white">BUILT FOR</span><br />
-              <span className="bg-gradient-to-r from-[#00A3FF] via-[#38BDF8] to-[#00E5FF] bg-clip-text text-transparent drop-shadow-[0_4px_25px_rgba(0,163,255,0.8)]">
+              <span className="bg-gradient-to-r from-[#0052CC] via-[#0070F3] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(0,112,243,0.5)]">
                 WHAT COMES NEXT.
               </span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
-              className="text-base sm:text-lg !text-slate-100 leading-relaxed max-w-xl pt-1 font-normal opacity-95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+              className="text-[15px] sm:text-[17px] lg:text-[18px] !text-slate-100 leading-relaxed max-w-xl pt-1 font-normal opacity-95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
             >
               Fly Ash Bricks manufactured with a focus on consistent shape, smooth finish, durability, and practical construction requirements.
             </motion.p>
@@ -70,16 +76,16 @@ export default function Home() {
             <motion.div variants={fadeUp} className="pt-3 flex flex-wrap items-center gap-4">
               <Link
                 to="/products"
-                className="px-8 py-3.5 bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 !text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-[0_8px_25px_rgba(0,112,243,0.5)] flex items-center gap-2.5 transition-all duration-200 group"
+                className="h-[44px] px-[22px] bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 !text-white font-bold text-[13px] sm:text-[14px] uppercase tracking-wider rounded-[8px] shadow-[0_8px_25px_rgba(0,112,243,0.5)] inline-flex items-center gap-2.5 transition-all duration-200 group border border-blue-400/30 active:scale-95"
               >
-                <span>EXPLORE PRODUCTS</span>
+                <span>Explore Fly Ash Bricks</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-3.5 bg-slate-900/90 hover:bg-slate-800 !text-slate-100 border border-slate-600/80 font-bold text-xs uppercase tracking-wider rounded-lg transition-all duration-200 backdrop-blur-md shadow-md"
+                className="h-[44px] px-[22px] bg-slate-900/90 hover:bg-slate-800 !text-slate-100 border border-slate-600/80 font-bold text-[13px] sm:text-[14px] uppercase tracking-wider rounded-[8px] transition-all duration-200 backdrop-blur-md shadow-md inline-flex items-center justify-center active:scale-95"
               >
-                <span>CONTACT US</span>
+                <span>Talk to Our Team</span>
               </Link>
             </motion.div>
           </motion.div>
@@ -90,6 +96,11 @@ export default function Home() {
       {/* 02. ONE PRODUCT. CLEAR FOCUS.                                             */}
       {/* ========================================================================= */}
       <OneProductFocusSection />
+
+      {/* ========================================================================= */}
+      {/* 03. WHY BUILDERS CHOOSE US (FACTUAL TRUST PILLARS)                        */}
+      {/* ========================================================================= */}
+      <WhyBuildersChooseUsSection />
 
       {/* ========================================================================= */}
       {/* 03. PRODUCT STAGE                                                         */}

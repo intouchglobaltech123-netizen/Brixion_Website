@@ -23,7 +23,7 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
   };
 
   return (
-    <section id={id} className={`py-16 sm:py-20 lg:py-24 ${bgClasses[background]} ${className}`}>
+    <section id={id} className={`py-24 lg:py-[120px] ${bgClasses[background]} ${className}`}>
       <ResponsiveContainer size={containerSize}>
         {children}
       </ResponsiveContainer>

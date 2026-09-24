@@ -1,41 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brixion-cobalt: #0052CC;
-  --color-brixion-cobalt-dark: #003E99;
-  --color-brixion-cerulean: #0284C7;
-  --color-brixion-navy: #0C192E;
-  --color-brixion-navy-surface: #13243F;
-  --color-brixion-concrete: #7E8B9B;
-  --color-brixion-concrete-light: #CBD5E1;
-  --color-brixion-body-bg: #F1F3F6;
-  --color-brixion-body-alt: #E6EAF0;
+  --color-brixion-dark-primary: #090E1B;
+  --color-brixion-dark-secondary: #111827;
+  --color-brixion-blue-primary: #1078ED;
+  --color-brixion-cyan-accent: #35C8F2;
+  --color-brixion-text-main: #111827;
+  --color-brixion-text-secondary: #64748B;
+  --color-brixion-bg-light: #F5F7FA;
+  --color-brixion-white: #FFFFFF;
+
+  --color-brixion-cobalt: #1078ED;
+  --color-brixion-cobalt-dark: #0056B3;
+  --color-brixion-cerulean: #35C8F2;
+  --color-brixion-navy: #090E1B;
+  --color-brixion-navy-surface: #111827;
+  --color-brixion-concrete: #64748B;
+  --color-brixion-concrete-light: #E5E7EB;
+  --color-brixion-body-bg: #F5F7FA;
+  --color-brixion-body-alt: #E5E7EB;
   --color-brixion-card-bg: #FFFFFF;
 
-  --color-bg-deep: #F1F3F6;
-  --color-bg-surface: #E6EAF0;
+  --color-bg-deep: #F5F7FA;
+  --color-bg-surface: #E5E7EB;
   --color-bg-panel: #FFFFFF;
 
-  --color-accent: #0052CC;
-  --color-accent-light: #0284C7;
+  --color-accent: #1078ED;
+  --color-accent-light: #35C8F2;
 
-  --color-text-primary: #0C192E;
-  --color-text-body: #334155;
+  --color-text-primary: #111827;
+  --color-text-body: #111827;
   --color-text-muted: #64748B;
 
-  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
-  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root {
-  --brixion-navy: #0C192E;
-  --brixion-cobalt: #0052CC;
-  --brixion-cerulean: #0284C7;
-  --brixion-body-bg: #F1F3F6;
-  --brixion-body-alt: #E6EAF0;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --brixion-dark-primary: #090E1B;
+  --brixion-dark-secondary: #111827;
+  --brixion-blue-primary: #1078ED;
+  --brixion-cyan-accent: #35C8F2;
+  --brixion-text-main: #111827;
+  --brixion-text-secondary: #64748B;
+  --brixion-bg-light: #F5F7FA;
+  --brixion-white: #FFFFFF;
+
+  --brixion-navy: #090E1B;
+  --brixion-cobalt: #1078ED;
+  --brixion-cerulean: #35C8F2;
+  --brixion-body-bg: #F5F7FA;
+  --brixion-body-alt: #E5E7EB;
   --brixion-card-bg: #FFFFFF;
-  --brixion-text-heading: #0C192E;
-  --brixion-text-body: #334155;
+  --brixion-text-heading: #111827;
+  --brixion-text-body: #111827;
   --brixion-text-muted: #64748B;
 }
 
@@ -46,11 +68,116 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #F1F3F6 !important;
-  color: #334155 !important;
-  font-family: 'Inter', sans-serif;
+  background-color: #F5F7FA !important;
+  color: #111827 !important;
+  font-family: var(--font-body);
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* Global Responsive Typography Hierarchy */
+.heading-h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  font-size: 38px;
+}
+@media (min-width: 640px) {
+  .heading-h1 { font-size: 50px; }
+}
+@media (min-width: 1024px) {
+  .heading-h1 { font-size: 64px; }
+}
+
+.heading-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: 30px;
+}
+@media (min-width: 640px) {
+  .heading-h2 { font-size: 38px; }
+}
+@media (min-width: 1024px) {
+  .heading-h2 { font-size: 45px; }
+}
+
+.heading-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  font-size: 22px;
+}
+@media (min-width: 1024px) {
+  .heading-h3 { font-size: 26px; }
+}
+
+.body-base {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  .body-base { font-size: 16px; }
+}
+
+.body-small {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+}
+@media (min-width: 640px) {
+  .body-small { font-size: 14px; }
+}
+
+.text-caption {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.4;
+}
+@media (min-width: 640px) {
+  .text-caption { font-size: 12px; }
+}
+
+/* Standardized Spacing Scale (8, 12, 16, 24, 32, 48, 64, 80, 96, 120) */
+:root {
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-120: 120px;
+}
+
+.section-padding {
+  padding-block: 96px;
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-block: 120px;
+  }
+}
+
+/* Standardized Content Container Utility */
+.site-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 24px;
 }
 
 /* Headings */
@@ -82,25 +209,25 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.8rem 1.75rem;
-  background-color: #0052CC !important;
+  background-color: #1078ED !important;
   color: #ffffff !important;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.03em;
-  border-radius: 0.375rem;
-  border: 1px solid #0047BA;
-  box-shadow: 0 2px 4px rgba(0, 82, 204, 0.2);
+  border-radius: 8px;
+  border: 1px solid #0056B3;
+  box-shadow: 0 2px 4px rgba(16, 120, 237, 0.2);
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 44px;
   cursor: pointer;
 }
 
 .btn-primary-blue:hover {
-  background-color: #004099 !important;
-  border-color: #003380;
+  background-color: #0056B3 !important;
+  border-color: #003E99;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.35);
+  box-shadow: 0 4px 12px rgba(16, 120, 237, 0.35);
 }
 
 /* Crisp Industrial Outline Button */
@@ -111,12 +238,12 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   padding: 0.8rem 1.75rem;
   background-color: #FFFFFF !important;
-  color: #0C192E !important;
+  color: #111827 !important;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.03em;
-  border-radius: 0.375rem;
+  border-radius: 8px;
   border: 1.5px solid #CBD5E1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);

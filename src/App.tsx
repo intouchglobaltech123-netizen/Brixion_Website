@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -11,19 +12,23 @@ import Quality from './pages/Quality';
 import Contact from './pages/Contact';
 
 export default function App() {
+  const location = useLocation();
+
   return (
-    <div className="min-h-screen bg-[#F3F4F6] text-[#1F2937] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#F5F7FA] text-[#111827] flex flex-col font-sans">
       <ScrollToTop />
       <Navbar />
       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/manufacturing" element={<Manufacturing />} />
-          <Route path="/quality" element={<Quality />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/manufacturing" element={<Manufacturing />} />
+            <Route path="/quality" element={<Quality />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>

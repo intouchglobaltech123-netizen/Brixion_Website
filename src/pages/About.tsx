@@ -61,23 +61,24 @@ export default function About() {
       {/* ========================================================================= */}
       {/* 1. ABOUT HERO                                                             */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[60vh] flex items-center bg-[#F1F3F6] border-b border-[#CBD5E1] overflow-hidden">
-        <div className="absolute inset-0 bg-blueprint-grid opacity-50 pointer-events-none" />
+      <section className="relative min-h-[65vh] flex items-center bg-[#F1F3F6] border-b border-[#CBD5E1] overflow-hidden select-none">
+        {/* Subtle Architectural Blueprint Grid Background */}
+        <div className="absolute inset-0 bg-blueprint-grid opacity-60 pointer-events-none" />
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Left Content Column */}
+            {/* 50% Left Text Content Column */}
             <motion.div
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
-              className="lg:col-span-6 space-y-6"
+              className="space-y-6"
             >
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#E2E8F0] border border-[#CBD5E1]">
+              <motion.div variants={fadeUp} className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-[#E2E8F0] border border-[#CBD5E1]">
                 <span className="w-2 h-2 rounded-full bg-[#0052CC]" />
                 <span className="text-xs font-mono text-[#0052CC] uppercase font-bold tracking-wider">
-                  ABOUT BRIXION BRICKS AND BLOCKS LLP
+                  BRIXION BRICKS AND BLOCKS LLP
                 </span>
               </motion.div>
 
@@ -89,6 +90,16 @@ export default function About() {
                 <span className="text-[#0052CC]">of Better Construction.</span>
               </motion.h1>
 
+              {/* Technical Tagline Subhead */}
+              <motion.div variants={fadeUp} className="p-4 rounded-xl bg-white border-l-4 border-[#0052CC] border-y border-r border-[#CBD5E1] shadow-xs space-y-1">
+                <p className="text-xs font-mono font-bold text-[#0052CC] uppercase tracking-widest">
+                  ESTABLISHED CONSTRUCTION MATERIALS
+                </p>
+                <p className="text-sm font-bold text-[#0C192E] font-heading tracking-tight">
+                  ENGINEERED FOR CONSISTENCY
+                </p>
+              </motion.div>
+
               <motion.p
                 variants={fadeUp}
                 className="text-base sm:text-lg text-[#334155] leading-relaxed font-normal"
@@ -97,19 +108,25 @@ export default function About() {
               </motion.p>
             </motion.div>
 
-            {/* Right Photo Column (Uploaded Industrial Facility Image) */}
+            {/* 50% Right Photo Column with Architectural Detail */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="lg:col-span-6"
+              className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-xl bg-white group">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-2xl bg-white group">
                 <img
                   src="/assets/about-facility.jpg"
                   alt="Brixion Industrial Fly Ash Bricks Manufacturing Plant"
-                  className="w-full h-[380px] sm:h-[450px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
                 />
+
+                {/* Top Corner Technical Tag */}
+                <div className="absolute top-4 right-4 bg-[#0C192E]/90 text-white font-mono text-[10px] font-bold px-3 py-1 rounded border border-white/20 backdrop-blur-xs flex items-center gap-2 shadow-md">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse" />
+                  <span>PLANT FACILITY // COIMBATORE</span>
+                </div>
               </div>
             </motion.div>
 

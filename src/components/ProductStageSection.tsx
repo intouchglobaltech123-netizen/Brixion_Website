@@ -72,14 +72,14 @@ export default function ProductStageSection() {
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                { label: "Dimensions", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Approx Weight", val: "3.25 kg per unit", icon: <Box className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Surface Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Compressive Strength", val: "High Strength Pass", icon: <ShieldCheck className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Water Absorption", val: "Low Rate", icon: <Droplets className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Quality Pass", val: "100% Inspected", icon: <Check className="w-4 h-4 text-[#0052CC]" /> },
+                { label: "Dimensions", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Approx Weight", val: "3.25 kg per unit", icon: <Box className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Surface Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Compressive Strength", val: "High Strength Pass", icon: <ShieldCheck className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Water Absorption", val: "Low Rate", icon: <Droplets className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Quality Pass", val: "100% Inspected", icon: <Check className="w-4 h-4 text-[#0C192E]" /> },
               ].map((spec) => (
-                <div key={spec.label} className="p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-[#0052CC] transition-all shadow-xs space-y-1">
+                <div key={spec.label} className="p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-slate-400 transition-all shadow-xs space-y-1">
                   <div className="flex items-center gap-2">
                     {spec.icon}
                     <span className="text-[11px] font-mono font-bold text-slate-500 uppercase">{spec.label}</span>

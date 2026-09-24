@@ -16,10 +16,10 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({ children, className = 
 
   return (
     <motion.main
-      initial={{ opacity: 0, y: 15 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -15 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       className={`min-h-screen ${className}`}
     >
       {children}
