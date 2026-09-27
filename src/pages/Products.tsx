@@ -84,48 +84,49 @@ const productBenefits = [
     num: "01",
     title: "High Strength & Durability",
     desc: "Engineered for high compressive strength and dependable structural longevity.",
-    icon: <ShieldCheck className="w-5 h-5 text-[#0052CC]" />
+    icon: <ShieldCheck className="w-6 h-6 text-white" />
   },
   {
     num: "02",
     title: "Eco-Friendly Manufacturing",
     desc: "Produced with industrial fly ash by-products, conserving valuable agricultural topsoil.",
-    icon: <Sparkles className="w-5 h-5 text-[#0052CC]" />
+    icon: <Sparkles className="w-6 h-6 text-white" />
   },
   {
     num: "03",
     title: "Smooth Surface Finish",
     desc: "Smooth plane faces allow thinner plaster coats and clean visible joint lines.",
-    icon: <Layers className="w-5 h-5 text-[#0052CC]" />
+    icon: <Layers className="w-6 h-6 text-white" />
   },
   {
     num: "04",
     title: "Low Water Absorption",
     desc: "Brochure-listed low water absorption resists moisture infiltration and efflorescence.",
-    icon: <Droplets className="w-5 h-5 text-[#0052CC]" />
+    icon: <Droplets className="w-6 h-6 text-white" />
   },
   {
     num: "05",
     title: "Uniform Size & Shape",
     desc: "Consistent 9 × 4.25 × 3″ modular dimensions ensure precise alignment during construction.",
-    icon: <Ruler className="w-5 h-5 text-[#0052CC]" />
+    icon: <Ruler className="w-6 h-6 text-white" />
   },
   {
     num: "06",
     title: "Cost-Effective Construction",
     desc: "Reduces mortar joint thickness by 20%–25% and speeds up masonry erection.",
-    icon: <DollarSign className="w-5 h-5 text-[#0052CC]" />
+    icon: <DollarSign className="w-6 h-6 text-white" />
   },
   {
     num: "07",
     title: "No Firing Needed",
     desc: "Manufactured without kiln firing, completely eliminating carbon combustion emissions.",
-    icon: <Flame className="w-5 h-5 text-[#0052CC]" />
+    icon: <Flame className="w-6 h-6 text-white" />
   },
 ];
 
 export default function Products() {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
+  const [activeAppIndex, setActiveAppIndex] = useState(0);
 
   const activePhoto = productPhotos[selectedPhotoIndex];
 
@@ -185,25 +186,6 @@ export default function Products() {
                   <span>EXPLORE SPECIFICATIONS</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-
-                <button
-                  onClick={() => {
-                    const elem = document.getElementById('material-comparison');
-                    elem?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="btn-outline-navy text-xs uppercase tracking-wider font-bold py-3.5 px-6 inline-flex items-center gap-2 cursor-pointer"
-                >
-                  <span>COMPARE MATERIALS</span>
-                  <ArrowRight className="w-4 h-4 text-[#0052CC]" />
-                </button>
-
-                <Link
-                  to="/contact"
-                  className="px-6 py-3.5 rounded-lg bg-[#0C192E] text-white hover:bg-[#0052CC] transition-colors text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2 shadow-sm"
-                >
-                  <span>REQUEST AN ENQUIRY</span>
-                  <ArrowRight className="w-4 h-4 text-white" />
-                </Link>
               </motion.div>
             </motion.div>
 
@@ -214,11 +196,14 @@ export default function Products() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-6"
             >
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-2xl bg-white group">
+              <div 
+                data-tilt="true"
+                className="spotlight-card relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] hover:border-slate-400 shadow-2xl bg-white group cursor-pointer"
+              >
                 <img
                   src="/assets/services-hero-stockyard.jpg"
                   alt="Finished Fly Ash Bricks stacked neatly on wooden pallets in industrial stock yard"
-                  className="w-full h-[360px] sm:h-[440px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  className="w-full h-[360px] sm:h-[440px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="eager"
                 />
               </div>
@@ -323,19 +308,21 @@ export default function Products() {
             {/* Product Specification Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
               {[
-                { label: "Size", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Approx. Weight", val: "3.25 kg per brick", icon: <Box className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Shape", val: "Uniform Modular", icon: <ShieldCheck className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Product Type", val: "Fly Ash Bricks", icon: <Check className="w-4 h-4 text-[#0052CC]" /> },
-                { label: "Water Absorption", val: "Low (Brochure Listed)", icon: <Droplets className="w-4 h-4 text-[#0052CC]" /> },
+                { label: "Size", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-white" /> },
+                { label: "Approx. Weight", val: "3.25 kg per brick", icon: <Box className="w-4 h-4 text-white" /> },
+                { label: "Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-white" /> },
+                { label: "Shape", val: "Uniform Modular", icon: <ShieldCheck className="w-4 h-4 text-white" /> },
+                { label: "Product Type", val: "Fly Ash Bricks", icon: <Check className="w-4 h-4 text-white" /> },
+                { label: "Water Absorption", val: "Low (Brochure Listed)", icon: <Droplets className="w-4 h-4 text-white" /> },
               ].map((spec) => (
                 <div
                   key={spec.label}
-                  className="p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-[#0052CC] transition-all shadow-xs"
+                  className="p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-[#0052CC] transition-all shadow-xs group"
                 >
-                  <div className="flex items-center gap-1.5 text-[#64748B] text-[11px] font-mono uppercase font-bold mb-1">
-                    {spec.icon}
+                  <div className="flex items-center gap-2 text-[#64748B] text-[11px] font-mono uppercase font-bold mb-1">
+                    <div className="symbol-badge w-7 h-7 rounded-lg">
+                      {spec.icon}
+                    </div>
                     <span>{spec.label}</span>
                   </div>
                   <span className="text-xs sm:text-sm font-bold text-[#0C192E] block">
@@ -414,41 +401,38 @@ export default function Products() {
           </div>
 
           {/* Benefit Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {productBenefits.map((b, idx) => (
               <motion.div
                 key={b.num}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.6, delay: 0.1 + idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative bg-white border border-[#E2E8F0] hover:border-[#0052CC]/40 rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-lg transition-all duration-400 cursor-default"
+                transition={{ duration: 0.6, delay: 0.08 * idx, ease: [0.22, 1, 0.36, 1] }}
+                data-tilt="true"
+                className="spotlight-card group relative bg-white border border-[#CBD5E1] hover:border-[#1078ED]/60 rounded-2xl p-6 shadow-xs hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between space-y-4"
               >
-                {/* Left accent bar */}
-                <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-[#0052CC]/20 group-hover:bg-[#0052CC] transition-colors duration-300" />
-
-                {/* Top row: icon + number */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#0052CC]/10 border border-[#0052CC]/20 group-hover:bg-[#0052CC]/15 group-hover:border-[#0052CC]/40 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                    {b.icon}
+                <div className="space-y-4 relative z-10">
+                  {/* Top Row: Vibrant Gradient Icon Box + Monospace Number */}
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E5E7EB]">
+                    <div className="symbol-badge w-12 h-12">
+                      {b.icon}
+                    </div>
+                    <span className="text-xs font-mono font-bold text-[#64748B] group-hover:text-[#1078ED] transition-colors">
+                      {b.num}
+                    </span>
                   </div>
-                  <span className="text-2xl font-black font-mono text-[#0C192E]/8 group-hover:text-[#0052CC]/20 transition-colors duration-300 select-none">
-                    {b.num}
-                  </span>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-extrabold text-[#0C192E] font-heading tracking-tight group-hover:text-[#1078ED] transition-colors leading-snug">
+                    {b.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed font-normal">
+                    {b.desc}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-base sm:text-lg font-bold text-[#0C192E] group-hover:text-[#0052CC] transition-colors duration-300 mb-2 leading-snug">
-                  {b.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed transition-colors duration-300">
-                  {b.desc}
-                </p>
-
-                {/* Bottom hover accent line */}
-                <div className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-transparent via-[#0052CC]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </motion.div>
             ))}
           </div>
@@ -511,8 +495,8 @@ export default function Products() {
             />
           </div>
 
-          {/* 3 Application Cards — 100% Uniform Composition & Visual Treatment */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* 3 Application Cards — Expanding Accordion Slider (Video Reference Matched) */}
+          <div className="flex flex-col lg:flex-row gap-5 h-auto lg:h-[500px] transition-all duration-500 ease-out">
             {[
               {
                 num: '01',
@@ -520,7 +504,13 @@ export default function Products() {
                 title: 'RESIDENTIAL',
                 desc: 'Built for everyday residential construction.',
                 src: '/assets/app-residential.jpg',
-                alt: 'Residential house under construction with grey fly ash brick masonry walls'
+                alt: 'Residential house under construction with grey fly ash brick masonry walls',
+                features: [
+                  'Multi-storey residential housing & villas',
+                  'High sound insulation & thermal comfort',
+                  'Smooth surface finish reduces plaster thickness',
+                  'Tight 10mm mortar joint alignment'
+                ]
               },
               {
                 num: '02',
@@ -528,7 +518,13 @@ export default function Products() {
                 title: 'COMMERCIAL',
                 desc: 'Built for high-capacity commercial developments.',
                 src: '/assets/app-commercial.jpg',
-                alt: 'Multi-storey commercial building under construction with brick masonry'
+                alt: 'Multi-storey commercial building under construction with brick masonry',
+                features: [
+                  'High-rise commercial towers & office blocks',
+                  'High compressive strength (7.5 - 12 N/mm²)',
+                  '20-25% reduction in overall mortar usage',
+                  'Uniform modular dimensions for rapid erection'
+                ]
               },
               {
                 num: '03',
@@ -536,57 +532,92 @@ export default function Products() {
                 title: 'INDUSTRIAL',
                 desc: 'Built for heavy-duty industrial facilities.',
                 src: '/assets/app-industrial.jpg',
-                alt: 'Industrial warehouse building with large brick masonry walls'
+                alt: 'Industrial warehouse building with large brick masonry walls',
+                features: [
+                  'Heavy-duty industrial warehouses & complexes',
+                  'High durability & weather resistance',
+                  'Load-bearing boundary walls & enclosures',
+                  'Consistent batch supply for large BOQ sites'
+                ]
               }
-            ].map((app, idx) => (
-              <motion.div
-                key={app.num}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.6, delay: idx * 0.12 }}
-                className="group relative rounded-xl overflow-hidden bg-[#0C192E] border border-[#CBD5E1] hover:border-[#0052CC] shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6 sm:p-7"
-              >
-                {/* Full-bleed Uniform Image */}
-                <img
-                  src={app.src}
-                  alt={app.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
+            ].map((app, idx) => {
+              const isActive = activeAppIndex === idx;
+              return (
+                <motion.div
+                  key={app.num}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.6, delay: idx * 0.12 }}
+                  onMouseEnter={() => setActiveAppIndex(idx)}
+                  onClick={() => setActiveAppIndex(idx)}
+                  className={`spotlight-card group relative rounded-2xl overflow-hidden bg-[#0C192E] border-2 transition-all duration-500 ease-out flex flex-col justify-end p-6 sm:p-8 cursor-pointer h-[420px] lg:h-full ${
+                    isActive
+                      ? 'lg:flex-[3] border-[#0070F3] shadow-2xl ring-2 ring-[#0070F3]/30'
+                      : 'lg:flex-[1] border-[#CBD5E1] hover:border-[#0070F3]/60 shadow-md'
+                  }`}
+                >
+                  {/* Full-bleed Photo */}
+                  <img
+                    src={app.src}
+                    alt={app.alt}
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out ${
+                      isActive ? 'scale-105 filter brightness-100' : 'scale-100 filter brightness-75'
+                    }`}
+                    loading="lazy"
+                  />
 
-                {/* Identical Uniform Gradient Overlay */}
-                <div 
-                  className="absolute inset-0 pointer-events-none" 
-                  style={{ 
-                    background: 'linear-gradient(to top, rgba(12, 25, 46, 0.95) 0%, rgba(12, 25, 46, 0.65) 45%, rgba(12, 25, 46, 0.15) 75%, transparent 100%)' 
-                  }} 
-                />
+                  {/* Gradient Overlay */}
+                  <div 
+                    className="absolute inset-0 pointer-events-none z-10" 
+                    style={{ 
+                      background: 'linear-gradient(to top, rgba(12, 25, 46, 0.95) 0%, rgba(12, 25, 46, 0.65) 45%, rgba(12, 25, 46, 0.15) 75%, transparent 100%)' 
+                    }} 
+                  />
 
-                {/* Number Badge — Top Right */}
-                <div className="absolute top-5 right-5 z-20">
-                  <span className="text-xs font-mono font-bold text-white/80 bg-[#0C192E]/80 border border-white/15 px-2.5 py-1 rounded backdrop-blur-xs">
-                    {app.num}
-                  </span>
-                </div>
+                  {/* Number Badge — Top Right */}
+                  <div className="absolute top-5 right-5 z-20">
+                    <span className={`text-xs font-mono font-bold px-3 py-1 rounded backdrop-blur-xs transition-all duration-300 ${
+                      isActive ? 'bg-[#0070F3] text-white shadow-lg' : 'bg-[#0C192E]/80 text-white/80 border border-white/15'
+                    }`}>
+                      {app.num}
+                    </span>
+                  </div>
 
-                {/* Uniform Bottom Typography Content Position */}
-                <div className="relative z-20 space-y-2">
-                  <span className="text-[11px] font-mono font-bold text-[#38BDF8] uppercase tracking-widest block">
-                    {app.tag}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold !text-white font-heading tracking-tight drop-shadow-md uppercase">
-                    {app.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm !text-slate-200 leading-relaxed font-normal opacity-95">
-                    {app.desc}
-                  </p>
-                </div>
+                  {/* Bottom Typography & Content */}
+                  <div className="relative z-20 space-y-2">
+                    <span className="text-[11px] font-mono font-bold text-[#38BDF8] uppercase tracking-widest block">
+                      {app.tag}
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl font-extrabold !text-white font-heading tracking-tight drop-shadow-md uppercase">
+                      {app.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm !text-slate-200 leading-relaxed font-normal opacity-95">
+                      {app.desc}
+                    </p>
 
-                {/* Subtle Hover Accent Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0052CC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30" />
-              </motion.div>
-            ))}
+                    {/* Features list revealed when active */}
+                    <div className={`transition-all duration-500 overflow-hidden ${
+                      isActive ? 'max-h-40 opacity-100 pt-2' : 'max-h-0 lg:max-h-0 opacity-0 lg:opacity-0'
+                    }`}>
+                      <ul className="space-y-1.5 text-xs text-slate-300 font-mono border-t border-white/10 pt-2">
+                        {app.features.map((feat, fIdx) => (
+                          <li key={fIdx} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#0070F3] shrink-0" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Active Neon Blue Bottom Edge */}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-[#0070F3] transition-opacity duration-300 z-30 ${
+                    isActive ? 'opacity-100 shadow-[0_0_12px_#0070F3]' : 'opacity-0'
+                  }`} />
+                </motion.div>
+              );
+            })}
           </div>
 
         </div>

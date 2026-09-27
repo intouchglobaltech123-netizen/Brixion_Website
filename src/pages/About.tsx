@@ -27,31 +27,31 @@ const brandValues = [
     num: "01",
     title: 'QUALITY',
     desc: 'Consistent attention to product quality and finish.',
-    icon: <Award className="w-6 h-6" />
+    icon: <Award className="w-6 h-6 text-white" />
   },
   {
     num: "02",
     title: 'STRENGTH',
     desc: 'Fly Ash Bricks designed for strong and durable construction.',
-    icon: <ShieldCheck className="w-6 h-6" />
+    icon: <ShieldCheck className="w-6 h-6 text-white" />
   },
   {
     num: "03",
     title: 'CONSISTENCY',
     desc: 'Uniform dimensions and shape for dependable construction use.',
-    icon: <Layers className="w-6 h-6" />
+    icon: <Layers className="w-6 h-6 text-white" />
   },
   {
     num: "04",
     title: 'RESPONSIBILITY',
     desc: 'A focus on responsible construction-material manufacturing.',
-    icon: <Sparkles className="w-6 h-6" />
+    icon: <Sparkles className="w-6 h-6 text-white" />
   },
   {
     num: "05",
     title: 'RELIABILITY',
     desc: 'A dependable approach to product quality and customer requirements.',
-    icon: <Factory className="w-6 h-6" />
+    icon: <Factory className="w-6 h-6 text-white" />
   },
 ];
 
@@ -115,15 +115,18 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-2xl bg-white group">
+              <div 
+                data-tilt="true"
+                className="spotlight-card relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] hover:border-slate-400 shadow-2xl bg-white group cursor-pointer"
+              >
                 <img
                   src="/assets/about-facility.jpg"
                   alt="Brixion Industrial Fly Ash Bricks Manufacturing Plant"
-                  className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
                 {/* Top Corner Technical Tag */}
-                <div className="absolute top-4 right-4 bg-[#0C192E]/90 text-white font-mono text-[10px] font-bold px-3 py-1 rounded border border-white/20 backdrop-blur-xs flex items-center gap-2 shadow-md">
+                <div className="absolute top-4 right-4 bg-[#0C192E]/90 text-white font-mono text-[10px] font-bold px-3 py-1 rounded border border-white/20 backdrop-blur-xs flex items-center gap-2 shadow-md z-20">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse" />
                   <span>PLANT FACILITY // COIMBATORE</span>
                 </div>
@@ -142,11 +145,8 @@ export default function About() {
           
           {/* Left Text Content Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#E2E8F0] border border-[#CBD5E1]">
-              <span className="w-2 h-2 rounded-full bg-[#0052CC]" />
-              <span className="text-xs font-mono text-[#0052CC] uppercase font-bold tracking-wider">
-                OUR FOCUS
-              </span>
+            <div className="badge-pill">
+              <span>OUR FOCUS</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0C192E] tracking-tight leading-[1.15] font-heading">
@@ -161,7 +161,7 @@ export default function About() {
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
-              <Link to="/products" className="btn-primary-blue text-xs uppercase tracking-wider font-bold py-3.5 px-7 shadow-md">
+              <Link to="/products" className="btn-primary-blue btn-shimmer magnet-btn text-xs uppercase tracking-wider font-bold py-3.5 px-7 shadow-md">
                 <span>View Products</span>
                 <ArrowRight className="w-4 h-4 ml-1.5" />
               </Link>
@@ -170,11 +170,14 @@ export default function About() {
 
           {/* Right Image: Larger Factory & Production Yard Image */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-2xl bg-white group">
+            <div 
+              data-tilt="true"
+              className="spotlight-card relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] hover:border-slate-400 shadow-2xl bg-white group cursor-pointer"
+            >
               <img
                 src="/assets/about-focus.jpg"
                 alt="Brixion Automated Hydraulic Pressing & Production Yard"
-                className="w-full h-[460px] sm:h-[520px] lg:h-[560px] object-cover transition-transform duration-700 group-hover:scale-103"
+                className="w-full h-[460px] sm:h-[520px] lg:h-[560px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -191,11 +194,14 @@ export default function About() {
             
             {/* Left Photo Column */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-xl bg-[#F8FAFC] group">
+              <div 
+                data-tilt="true"
+                className="spotlight-card relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] hover:border-slate-400 shadow-xl bg-[#F8FAFC] group cursor-pointer"
+              >
                 <img
                   src="/assets/about-product-identity.jpg"
                   alt="Brixion Precision Fly Ash Bricks Specimen"
-                  className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
             </div>
@@ -226,9 +232,9 @@ export default function About() {
 
               {/* 4 Feature Specification Badges */}
               <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-[#CBD5E1] text-[#0052CC] flex items-center justify-center shrink-0 shadow-xs">
-                    <Ruler className="w-5 h-5" />
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs group">
+                  <div className="symbol-badge w-11 h-11">
+                    <Ruler className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-500 font-bold uppercase block">Dimensions</span>
@@ -236,9 +242,9 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-[#CBD5E1] text-[#0052CC] flex items-center justify-center shrink-0 shadow-xs">
-                    <Scale className="w-5 h-5" />
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs group">
+                  <div className="symbol-badge w-11 h-11">
+                    <Scale className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-500 font-bold uppercase block">Unit Weight</span>
@@ -246,9 +252,9 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-[#CBD5E1] text-[#0052CC] flex items-center justify-center shrink-0 shadow-xs">
-                    <Sparkles className="w-5 h-5" />
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs group">
+                  <div className="symbol-badge w-11 h-11">
+                    <Sparkles className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-500 font-bold uppercase block">Surface</span>
@@ -256,9 +262,9 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-[#CBD5E1] text-[#0052CC] flex items-center justify-center shrink-0 shadow-xs">
-                    <Layers className="w-5 h-5" />
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] flex items-center gap-3.5 shadow-xs group">
+                  <div className="symbol-badge w-11 h-11">
+                    <Layers className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-500 font-bold uppercase block">Geometry</span>
@@ -331,8 +337,8 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.12 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white border border-[#CBD5E1] rounded-2xl p-4 shadow-sm hover:border-[#0052CC] hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full space-y-3 relative group cursor-pointer"
+                data-tilt="true"
+                className="spotlight-card bg-white border border-[#CBD5E1] rounded-2xl p-4 shadow-sm hover:border-[#0052CC] hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full space-y-3 relative group cursor-pointer"
               >
                 
                 {/* Animated Blue Arrow Button Connecting Boxes (for steps 1 to 4) */}
@@ -405,28 +411,28 @@ export default function About() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="bg-white border border-[#CBD5E1] rounded-2xl p-5 shadow-xs hover:border-[#0052CC] hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4 group cursor-pointer"
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                data-tilt="true"
+                className="spotlight-card bg-white border border-[#CBD5E1] hover:border-[#1078ED]/60 rounded-2xl p-5 shadow-xs hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between space-y-4 group cursor-pointer"
               >
-                <div className="space-y-4">
+                <div className="space-y-4 relative z-10">
                   {/* Top Icon Box & Number */}
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                    <div className="w-11 h-11 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-[#0052CC] group-hover:bg-[#0052CC] group-hover:text-white group-hover:border-[#0052CC] flex items-center justify-center transition-colors duration-300 shadow-xs">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E5E7EB]">
+                    <div className="symbol-badge w-12 h-12">
                       {v.icon}
                     </div>
-                    <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-[#0052CC] transition-colors">
+                    <span className="text-xs font-mono font-bold text-[#64748B] group-hover:text-[#1078ED] transition-colors">
                       {v.num}
                     </span>
                   </div>
 
                   {/* Navy Heading */}
-                  <h3 className="text-lg font-extrabold text-[#0C192E] group-hover:text-[#0052CC] transition-colors font-heading tracking-tight">
+                  <h3 className="text-lg font-extrabold text-[#0C192E] group-hover:text-[#1078ED] transition-colors font-heading tracking-tight">
                     {v.title}
                   </h3>
 
                   {/* Content Paragraph */}
-                  <p className="text-xs text-[#475569] leading-relaxed font-normal">
+                  <p className="text-xs text-[#64748B] leading-relaxed font-normal">
                     {v.desc}
                   </p>
                 </div>
@@ -452,32 +458,32 @@ export default function About() {
           {[
             {
               title: "Premium Quality Bricks",
-              icon: <Award className="w-5 h-5" />,
+              icon: <Award className="w-5 h-5 text-white" />,
               desc: "Precision hydraulic pressing ensures sharp 90° edges and uniform smooth surface finish."
             },
             {
               title: "Strong and Durable",
-              icon: <ShieldCheck className="w-5 h-5" />,
+              icon: <ShieldCheck className="w-5 h-5 text-white" />,
               desc: "Engineered to achieve 7.5 - 12 N/mm² compressive strength for high load-bearing capacity."
             },
             {
               title: "Suitable for All Construction Works",
-              icon: <Building2 className="w-5 h-5" />,
+              icon: <Building2 className="w-5 h-5 text-white" />,
               desc: "Versatile masonry units for load-bearing walls, high-rise partitions, and boundary structures."
             },
             {
               title: "Reliable Supply",
-              icon: <Factory className="w-5 h-5" />,
+              icon: <Factory className="w-5 h-5 text-white" />,
               desc: "High-capacity automated plant producing 50,000 bricks daily for uninterrupted project supply."
             },
             {
               title: "Timely Delivery",
-              icon: <Truck className="w-5 h-5" />,
+              icon: <Truck className="w-5 h-5 text-white" />,
               desc: "Dedicated plant fleet ensuring punctual, damage-free site deliveries across Tamil Nadu."
             },
             {
               title: "Competitive Pricing",
-              icon: <DollarSign className="w-5 h-5" />,
+              icon: <DollarSign className="w-5 h-5 text-white" />,
               desc: "Direct manufacturer pricing providing 20-30% mortar savings and overall cost efficiency."
             }
           ].map((pillar, idx) => (
@@ -487,13 +493,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className="bg-white border border-[#CBD5E1] hover:border-[#0052CC] rounded-2xl p-6 flex items-start gap-4 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+              data-tilt="true"
+              className="spotlight-card bg-white border border-[#CBD5E1] hover:border-[#0052CC] rounded-2xl p-6 flex items-start gap-4 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-11 h-11 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-[#0052CC] group-hover:bg-[#0052CC] group-hover:text-white group-hover:border-[#0052CC] flex items-center justify-center shrink-0 transition-colors duration-300 shadow-xs">
+              <div className="symbol-badge w-11 h-11">
                 {pillar.icon}
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 relative z-10">
                 <h3 className="text-base font-extrabold text-[#0C192E] group-hover:text-[#0052CC] transition-colors duration-300 font-heading">
                   {pillar.title}
                 </h3>
@@ -525,11 +531,9 @@ export default function About() {
             
             {/* Left Headline & Text */}
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 backdrop-blur-sm">
+              <div className="badge-pill !bg-blue-500/15 !border-blue-400/30 !text-[#38BDF8]">
                 <span className="w-2 h-2 rounded-full bg-[#0088ff] animate-pulse" />
-                <span className="text-xs font-mono font-bold tracking-widest text-[#38BDF8] uppercase">
-                  QUALITY PROMISE
-                </span>
+                <span>QUALITY PROMISE</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase font-heading">
@@ -546,7 +550,7 @@ export default function About() {
             <div className="lg:col-span-4 flex lg:justify-end pt-2 lg:pt-0">
               <Link
                 to="/products"
-                className="px-8 py-4 bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-[0_8px_25px_rgba(0,112,243,0.5)] inline-flex items-center gap-3 transition-all duration-200 group active:scale-95 border border-blue-400/30"
+                className="btn-shimmer magnet-btn px-8 py-4 bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-[0_8px_25px_rgba(0,112,243,0.5)] inline-flex items-center gap-3 transition-all duration-200 group active:scale-95 border border-blue-400/30"
               >
                 <span>EXPLORE FLY ASH BRICKS</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5" />

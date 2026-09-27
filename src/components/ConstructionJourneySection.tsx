@@ -98,7 +98,7 @@ export default function ConstructionJourneySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1078ED]/10 border border-[#1078ED]/20 text-[#1078ED] font-mono text-xs font-bold uppercase tracking-wider"
+            className="badge-pill"
           >
             <span>CONSTRUCTION SEQUENCE</span>
           </motion.div>
@@ -148,8 +148,9 @@ export default function ConstructionJourneySection() {
                     stiffness: 220,
                     damping: 22,
                   }}
+                  data-tilt="true"
                   onClick={() => handleStepClick(idx)}
-                  className={`group relative flex flex-col justify-between h-full min-h-[360px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                  className={`spotlight-card group relative flex flex-col justify-between h-full min-h-[360px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
                     isCurrent
                       ? 'bg-white border-2 border-[#1078ED] ring-4 ring-[#1078ED]/20 shadow-[0_16px_36px_rgba(16,120,237,0.25)] z-30'
                       : isRevealed

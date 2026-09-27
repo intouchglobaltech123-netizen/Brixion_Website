@@ -29,12 +29,12 @@ export const Placeholder3DCanvas: React.FC<Placeholder3DCanvasProps> = ({
       />
 
       <div className="relative z-10 flex flex-col items-center space-y-3">
-        <div className="w-14 h-14 rounded-full bg-[#d9532f]/10 border border-[#d9532f]/30 flex items-center justify-center text-[#d9532f] font-mono text-xl">
+        <div className="w-14 h-14 rounded-full bg-[#0070f3]/10 border border-[#0070f3]/30 flex items-center justify-center text-[#0070f3] font-mono text-xl">
           3D
         </div>
         <h4 className="text-base font-bold text-[#f5f6f8] font-heading">{title}</h4>
         <p className="text-xs text-[#94a3b8] max-w-xs leading-relaxed">{message}</p>
-        <span className="text-[10px] font-mono text-[#d9532f] uppercase tracking-widest pt-2">
+        <span className="text-[10px] font-mono text-[#0070f3] uppercase tracking-widest pt-2">
           [ Ready for R3F / Three.js integration ]
         </span>
       </div>

@@ -13,10 +13,10 @@ import { Button } from '../components/ui/Button';
 import { fadeUp, staggerContainer } from '../components/animations/variants';
 
 const stepIcons = [
-  <Layers className="w-6 h-6 text-[#d9532f]" key="layers" />,
-  <Cpu className="w-6 h-6 text-[#d9532f]" key="cpu" />,
-  <Droplets className="w-6 h-6 text-[#d9532f]" key="droplets" />,
-  <CheckCircle2 className="w-6 h-6 text-[#d9532f]" key="check" />,
+  <Layers className="w-6 h-6 text-[#0070f3]" key="layers" />,
+  <Cpu className="w-6 h-6 text-[#0070f3]" key="cpu" />,
+  <Droplets className="w-6 h-6 text-[#0070f3]" key="droplets" />,
+  <CheckCircle2 className="w-6 h-6 text-[#0070f3]" key="check" />,
 ];
 
 export default function Manufacturing() {
@@ -66,7 +66,7 @@ export default function Manufacturing() {
             <div key={step.stepNumber} className="relative flex flex-col justify-between">
               <Card className="h-full space-y-4 relative z-10">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                  <span className="text-4xl font-black text-[#d9532f] font-mono">
+                  <span className="text-4xl font-black text-[#0070f3] font-mono">
                     {step.stepNumber}
                   </span>
                   <div className="w-10 h-10 rounded-lg bg-[#1a1e27] border border-white/10 flex items-center justify-center">

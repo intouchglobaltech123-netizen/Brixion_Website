@@ -1,30 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Check, Sparkles } from 'lucide-react';
 
 const editorialPhotos = [
   {
     title: "Residential Masonry",
     subtitle: "Clean Joint Coursing",
     image: "/assets/app-residential.jpg",
-    desc: "Fly Ash Bricks integrated into multi-story residential housing projects."
+    desc: "Fly Ash Bricks integrated into multi-story residential housing projects.",
+    features: ["Smooth plane face", "10mm tight joints", "Reduces plaster", "High acoustic rating"]
   },
   {
     title: "Commercial High-Rise",
     subtitle: "Structural Uniformity",
     image: "/assets/app-commercial.jpg",
-    desc: "Precision modular bricks for high-capacity commercial developments."
+    desc: "Precision modular bricks for high-capacity commercial developments.",
+    features: ["High-rise partitions", "7.5-12 N/mm² strength", "20-25% mortar saved", "Fast construction"]
   },
   {
     title: "Industrial Warehouses",
     subtitle: "Heavy-Duty Enclosures",
     image: "/assets/app-industrial.jpg",
-    desc: "High compressive strength masonry walls for industrial logistics facilities."
+    desc: "High compressive strength masonry walls for industrial logistics facilities.",
+    features: ["Heavy load-bearing", "Weather durability", "Zero thermal firing", "Low water absorption"]
   },
   {
     title: "Plumb Wall Coursing",
     subtitle: "Smooth Mortar Finish",
     image: "/assets/flyash-wall-construction.jpg",
-    desc: "Uniform plane surfaces minimizing plaster thickness on active construction sites."
+    desc: "Uniform plane surfaces minimizing plaster thickness on active construction sites.",
+    features: ["Sharp 90° edges", "Precise ±1mm size", "Consistent coursing", "100% quality pass"]
   }
 ];
 
@@ -65,7 +70,8 @@ export default function BuiltIntoEverydaySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative rounded-2xl overflow-hidden bg-[#0C192E] border border-[#CBD5E1] hover:border-[#0052CC] shadow-md hover:shadow-2xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6"
+              data-tilt="true"
+              className="spotlight-card group relative rounded-2xl overflow-hidden bg-[#0C192E] border border-[#CBD5E1] hover:border-slate-400 shadow-md hover:shadow-2xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6 cursor-pointer"
             >
               {/* Background Photo */}
               <img

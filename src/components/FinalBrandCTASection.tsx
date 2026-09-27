@@ -65,7 +65,7 @@ export default function FinalBrandCTASection() {
         >
           <Link
             to="/contact"
-            className="px-6 py-2.5 bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-[0_4px_15px_rgba(0,112,243,0.4)] flex items-center gap-2 transition-all duration-200 group"
+            className="btn-shimmer magnet-btn px-6 py-2.5 bg-gradient-to-r from-[#0070f3] via-[#0085FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-[0_4px_15px_rgba(0,112,243,0.4)] flex items-center gap-2 transition-all duration-200 group"
           >
             <span>REQUEST AN ENQUIRY</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -73,7 +73,7 @@ export default function FinalBrandCTASection() {
 
           <a
             href="tel:+919876543210"
-            className="px-6 py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-100 border border-slate-700 font-bold text-xs uppercase tracking-wider rounded-lg transition-all duration-200 backdrop-blur-md shadow-md flex items-center gap-2"
+            className="magnet-btn px-6 py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-100 border border-slate-700 font-bold text-xs uppercase tracking-wider rounded-lg transition-all duration-200 backdrop-blur-md shadow-md flex items-center gap-2"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#38BDF8]" />
             <span>CONTACT SALES</span>

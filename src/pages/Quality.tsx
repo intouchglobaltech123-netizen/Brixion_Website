@@ -53,9 +53,11 @@ export default function Quality() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {companyData.specialities.map((item) => (
-            <Card key={item} className="space-y-3">
+            <Card key={item} className="space-y-3 group">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#d9532f] shrink-0" />
+                <div className="symbol-badge w-9 h-9">
+                  <CheckCircle2 className="w-5 h-5 text-white" />
+                </div>
                 <h3 className="text-base font-bold text-[#f5f6f8]">{item}</h3>
               </div>
               <p className="text-xs text-[#94a3b8] leading-relaxed">
@@ -79,24 +81,30 @@ export default function Quality() {
             </p>
 
             <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10">
-                <Ruler className="w-5 h-5 text-[#d9532f] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10 group">
+                <div className="symbol-badge w-10 h-10 mt-0.5">
+                  <Ruler className="w-5 h-5 text-white" />
+                </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#f5f6f8]">Uniform Shape & Size</h4>
                   <p className="text-xs text-[#94a3b8]">Precision hydraulic molds eliminate irregular shapes common in manual clay brick baking.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10">
-                <Droplets className="w-5 h-5 text-[#d9532f] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10 group">
+                <div className="symbol-badge w-10 h-10 mt-0.5">
+                  <Droplets className="w-5 h-5 text-white" />
+                </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#f5f6f8]">Low Water Absorption</h4>
                   <p className="text-xs text-[#94a3b8]">Brochure confirmed low absorption resists dampness penetration in finished masonry walls.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10">
-                <Sparkles className="w-5 h-5 text-[#d9532f] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-[#12151c] border border-white/10 group">
+                <div className="symbol-badge w-10 h-10 mt-0.5">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#f5f6f8]">Smooth Surface Finish</h4>
                   <p className="text-xs text-[#94a3b8]">Directly lowers cement plastering thickness requirements for interior and exterior walls.</p>
@@ -107,12 +115,12 @@ export default function Quality() {
 
           {/* SVG/CSS Scanning Inspection Diagram */}
           <div className="lg:col-span-5 bg-[#12151c] border border-white/10 rounded-2xl p-8 shadow-2xl relative overflow-hidden flex flex-col items-center justify-center min-h-[320px]">
-            <div className="relative w-48 h-48 rounded-full border-2 border-dashed border-[#d9532f]/40 flex items-center justify-center">
+            <div className="relative w-48 h-48 rounded-full border-2 border-dashed border-[#0070f3]/40 flex items-center justify-center">
               {/* Animated Scanning Circle Line */}
               <div className="absolute inset-2 rounded-full border border-white/10 animate-spin" style={{ animationDuration: '12s' }} />
               
               <div className="text-center space-y-1">
-                <Eye className="w-8 h-8 text-[#d9532f] mx-auto mb-1" />
+                <Eye className="w-8 h-8 text-[#0070f3] mx-auto mb-1" />
                 <span className="font-mono text-xs font-bold text-[#f5f6f8] block">BRIXION QC</span>
                 <span className="text-[10px] font-mono text-[#94a3b8]">100% Visual & Dimensional Check</span>
               </div>

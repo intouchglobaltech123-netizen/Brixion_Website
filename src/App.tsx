@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import InteractiveEffects from './components/ui/InteractiveEffects';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F5F7FA] text-[#111827] flex flex-col font-sans">
       <ScrollToTop />
+      <InteractiveEffects />
       <Navbar />
       <main className="flex-grow">
         <AnimatePresence mode="wait">

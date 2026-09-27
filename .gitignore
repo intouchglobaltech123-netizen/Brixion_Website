@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+
+# Temporary files & local test artifacts
+scratch/
+temp_rec_frames/
+rec_frame_*.png
+seamless_*.png
+brixion_complete_single_file.html
+brixion_standalone.html
+brixion-website-full-project.zip
+.DS_Store

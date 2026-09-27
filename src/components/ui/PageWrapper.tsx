@@ -11,18 +11,18 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({ children, className = 
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {
-    return <main className={`min-h-screen ${className}`}>{children}</main>;
+    return <div className={`min-h-screen ${className}`}>{children}</div>;
   }
 
   return (
-    <motion.main
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       className={`min-h-screen ${className}`}
     >
       {children}
-    </motion.main>
+    </motion.div>
   );
 };

@@ -54,7 +54,7 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#0052CC]/10 border border-[#0052CC]/20 text-[#0052CC] font-mono text-xs font-bold uppercase tracking-wider"
+              className="badge-pill"
             >
               <span>QUESTIONS?</span>
             </motion.div>
@@ -90,9 +90,12 @@ export default function FAQSection() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="pt-4 border-t border-[#CBD5E1]"
             >
-              <div className="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-xs space-y-3">
+              <div 
+                data-tilt="true"
+                className="spotlight-card p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-xs space-y-3 cursor-pointer"
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#0052CC]/10 text-[#0052CC] flex items-center justify-center font-bold">
+                  <div className="symbol-badge w-10 h-10">
                     <PhoneCall className="w-5 h-5" />
                   </div>
                   <div>
@@ -124,10 +127,10 @@ export default function FAQSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.07 }}
-                  className={`rounded-xl transition-all duration-200 border overflow-hidden ${
+                  className={`spotlight-card rounded-xl transition-all duration-300 border overflow-hidden ${
                     isOpen 
-                      ? 'bg-white border-[#0052CC] shadow-md' 
-                      : 'bg-[#F1F5F9] border-[#CBD5E1] hover:border-[#94A3B8] hover:bg-white'
+                      ? 'bg-white border-[#0052CC] shadow-md ring-2 ring-[#0052CC]/15' 
+                      : 'bg-[#F1F5F9] border-[#CBD5E1] hover:border-[#0052CC]/60 hover:bg-white'
                   }`}
                 >
                   <button

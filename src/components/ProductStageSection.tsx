@@ -36,16 +36,19 @@ export default function ProductStageSection() {
           
           {/* Left Column: Stage Visual Card */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] shadow-xl bg-[#0C192E] group">
+            <div 
+              data-tilt="true"
+              className="spotlight-card relative rounded-2xl overflow-hidden border-2 border-[#CBD5E1] hover:border-slate-400 shadow-xl bg-[#0C192E] group cursor-pointer"
+            >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
                   src="/assets/flyash-main-product.jpg"
                   alt="Precision Stacked Brixion Fly Ash Bricks"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 
                 {/* Badge Overlay */}
-                <div className="absolute top-4 left-4 bg-[#0C192E]/90 text-white font-mono text-xs font-bold px-3 py-1.5 rounded backdrop-blur-xs flex items-center gap-2 border border-white/10 shadow-sm">
+                <div className="absolute top-4 left-4 bg-[#0C192E]/90 text-white font-mono text-xs font-bold px-3 py-1.5 rounded backdrop-blur-xs flex items-center gap-2 border border-white/10 shadow-sm z-20">
                   <span className="w-2 h-2 rounded-full bg-[#0052CC]" />
                   <span>SPECIMEN SPECIFICATION</span>
                 </div>
@@ -72,17 +75,23 @@ export default function ProductStageSection() {
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                { label: "Dimensions", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-[#0C192E]" /> },
-                { label: "Approx Weight", val: "3.25 kg per unit", icon: <Box className="w-4 h-4 text-[#0C192E]" /> },
-                { label: "Surface Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-[#0C192E]" /> },
-                { label: "Compressive Strength", val: "High Strength Pass", icon: <ShieldCheck className="w-4 h-4 text-[#0C192E]" /> },
-                { label: "Water Absorption", val: "Low Rate", icon: <Droplets className="w-4 h-4 text-[#0C192E]" /> },
-                { label: "Quality Pass", val: "100% Inspected", icon: <Check className="w-4 h-4 text-[#0C192E]" /> },
+                { label: "Dimensions", val: "9 × 4.25 × 3 inches", icon: <Ruler className="w-4 h-4 text-white" /> },
+                { label: "Approx Weight", val: "3.25 kg per unit", icon: <Box className="w-4 h-4 text-white" /> },
+                { label: "Surface Finish", val: "Smooth Plane", icon: <Layers className="w-4 h-4 text-white" /> },
+                { label: "Compressive Strength", val: "High Strength Pass", icon: <ShieldCheck className="w-4 h-4 text-white" /> },
+                { label: "Water Absorption", val: "Low Rate", icon: <Droplets className="w-4 h-4 text-white" /> },
+                { label: "Quality Pass", val: "100% Inspected", icon: <Check className="w-4 h-4 text-white" /> },
               ].map((spec) => (
-                <div key={spec.label} className="p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-slate-400 transition-all shadow-xs space-y-1">
+                <div 
+                  key={spec.label} 
+                  data-tilt="true"
+                  className="spotlight-card p-3.5 rounded-xl bg-white border border-[#CBD5E1] hover:border-[#0052CC] transition-all shadow-xs space-y-1.5 group cursor-pointer"
+                >
                   <div className="flex items-center gap-2">
-                    {spec.icon}
-                    <span className="text-[11px] font-mono font-bold text-slate-500 uppercase">{spec.label}</span>
+                    <div className="symbol-badge w-7 h-7 rounded-lg">
+                      {spec.icon}
+                    </div>
+                    <span className="text-[11px] font-mono font-bold text-slate-500 uppercase group-hover:text-[#0052CC] transition-colors">{spec.label}</span>
                   </div>
                   <p className="text-xs font-extrabold text-[#0C192E] font-mono">{spec.val}</p>
                 </div>
@@ -92,7 +101,7 @@ export default function ProductStageSection() {
             <div className="pt-2">
               <Link
                 to="/products"
-                className="btn-primary-blue text-xs uppercase tracking-wider font-bold py-3.5 px-7 inline-flex items-center gap-2 shadow-md"
+                className="btn-primary-blue btn-shimmer magnet-btn text-xs uppercase tracking-wider font-bold py-3.5 px-7 inline-flex items-center gap-2 shadow-md"
               >
                 <span>VIEW COMPLETE PRODUCT DATA</span>
                 <ArrowRight className="w-4 h-4" />
